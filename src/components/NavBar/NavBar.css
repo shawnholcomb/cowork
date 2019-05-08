@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+}
+
+nav {
+    border-bottom: 2px double black;
+}
