@@ -1,0 +1,55 @@
+h5 {
+    color: #fff;
+}
+
+.landing-page {
+    background: url('/images/landingpage-bg.jpg') center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.city-select {
+    width: 400px;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 5px;
+    position: absolute;
+    left: 18%;
+    top: 15%;
+}
+
+.city-select h1 {
+    color: #484848;
+    font-size: 2.4em;
+    margin-bottom: 1rem;
+    line-height: 150%;
+}
+
+.city-select select {
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
+    background: #fff;
+    border: 1px solid #999;
+    margin-bottom: 1rem;
+    color: #484848;
+}
+
+.city-select button {
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: #0078df;
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 655px) {
+    .city-select {
+        width: 400px;
+        position:relative;
+        left: 7%;
+        top: 0;
+    }
+}
