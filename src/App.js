@@ -1,13 +1,13 @@
 import React from 'react';
-import NavBar from './components/NavBar'
+import NavBar from './Components/NavBar'
+import SignIn from './Components/SignIn'
 import './App.css';
 
 function App() {
   return (
     <div>
-      <NavBar 
-        title="Project 3"
-      />
+      <NavBar title="DevConnect" />
+      <SignIn />
     </div>
   );
 }
