@@ -2,7 +2,7 @@
     display: flex;
     direction: row;
     justify-content: space-around;
-    border: 1px solid #000;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .business-header,
@@ -14,6 +14,7 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .business-header {
