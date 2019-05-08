@@ -1,0 +1,13 @@
+.HIW {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+}
+
+.HIW-steps {
+    border: 1px solid red;
+    height: 200px;
+    width: 25%;
+    font-size: 24px;
+    text-align: center;
+}

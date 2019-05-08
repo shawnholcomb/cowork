@@ -1,11 +1,11 @@
 import React from 'react';
+import './NavBar.css';
 
-function NavBar() {
-    return (
-        <navbar>
-            <h1>DevConnect</h1>
-        </navbar>
-    )
-}
+
+const NavBar = props => (
+    <nav>
+        <h1><a href='/'>{props.title}</a></h1>
+    </nav>
+)
 
 export default NavBar;
