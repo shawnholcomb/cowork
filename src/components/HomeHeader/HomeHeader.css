@@ -1,0 +1,14 @@
+.header-image {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    border: 1px solid #000;
+}
+
+.business-header,
+.dev-header {
+    border: 1px solid red;
+    width: 50%;
+    height: 500px;
+    text-align: center;
+}
