@@ -1,0 +1,36 @@
+.hiw-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.hiw-header h1 {
+    text-align: center;
+}
+
+.hiw-header h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.hiw-ul {
+    list-style-type: none;
+    padding: 15px;
+}
+
+.hiw-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hiw-li h3 {
+    color: #000;
+    font-weight: 500;
+}
+
+.hiw-li img {
+    height: 10%;
+    width: 10%;
+}
