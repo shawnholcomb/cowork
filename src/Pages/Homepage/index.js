@@ -1,14 +1,14 @@
 import React from 'react';
 import './Homepage.css';
-import NavBar from '../NavBar';
-import HomeHeader from '../HomeHeader';
-import HIWMain from '../HIWMain';
-import SignIn from '../SignIn';
-import Footer from '../Footer';
+import NavBar from '../../Components/NavBar';
+import HomeHeader from '../../Components/HomeHeader';
+import HIWMain from '../../Components/HIWMain';
+import SignIn from '../../Components/SignIn';
+import Footer from '../../Components/Footer';
 
 class Homepage extends React.Component {
     state = {
-        status: "business",
+        status: "default",
     };
 
     render() {
