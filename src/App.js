@@ -1,16 +1,24 @@
 import React from 'react';
-import NavBar from './components/NavBar'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Login from './components/SignIn'
+import LandingPage from './Pages/LandingPage';
+import Homepage from './Components/Homepage';
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      <NavBar title="DevConnect" />
-      <Login />
-    </div>
-  );
+class App extends React.Component {
+
+  render() {
+    return (
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path='/' component={ LandingPage } />
+            <Route exact path='/home' component={ Homepage } />
+          </Switch>
+        </div>
+      </Router>
+    )
+  };
 }
 
 export default App;
