@@ -1,5 +1,7 @@
 import React from 'react';
 import './LandingPage.css';
+import { Link } from 'react-router-dom'
+
 
 function LandingPage() {
     return (
@@ -11,7 +13,11 @@ function LandingPage() {
                 <div className="nav-links">
                     <ul className="nav-list">
                         <li><a href="/"><h5>How it Works</h5></a></li>
-                        <li><a href="/"><h5>Sign In</h5></a></li>
+                        <li> <Link 
+                        to= {{
+                            state: {isAuthModalOpen:true}
+                        }}> Signup</Link>
+                        </li>
 
                     </ul>
                 </div>

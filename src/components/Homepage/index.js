@@ -3,7 +3,7 @@ import './Homepage.css';
 import NavBar from '../NavBar';
 import HomeHeader from '../HomeHeader';
 import HIWMain from '../HIWMain';
-import SignIn from '../SignIn';
+
 import Footer from '../Footer';
 
 class Homepage extends React.Component {
@@ -17,7 +17,7 @@ class Homepage extends React.Component {
                 <NavBar />
                 <HomeHeader />
                 <HIWMain />
-                <SignIn />
+                
                 <Footer />
             </div>
         )
