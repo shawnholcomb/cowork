@@ -1,10 +1,10 @@
 import React from 'react';
 import './Homepage.css';
-import NavBar from '../../Components/NavBar';
-import HomeHeader from '../../Components/HomeHeader';
-import HIWMain from '../../Components/HIWMain';
-import SignIn from '../../Components/SignIn';
-import Footer from '../../Components/Footer';
+import NavBar from '../../components/NavBar';
+import HomeHeader from '../../components/HomeHeader';
+import HIWMain from '../../components/HIWMain';
+
+import Footer from '../../components/Footer';
 
 class Homepage extends React.Component {
     state = {
@@ -17,7 +17,7 @@ class Homepage extends React.Component {
                 <NavBar />
                 <HomeHeader />
                 <HIWMain />
-                <SignIn />
+                
                 <Footer />
             </div>
         )

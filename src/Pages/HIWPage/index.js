@@ -1,7 +1,7 @@
 import React from 'react';
-import NavBar from '../../Components/NavBar';
-import Works from '../../Components/Works';
-import Footer from '../../Components/Footer';
+import NavBar from '../../components/NavBar';
+import Works from '../../components/Works';
+import Footer from '../../components/Footer';
 
 function HIWPage() {
     return (
