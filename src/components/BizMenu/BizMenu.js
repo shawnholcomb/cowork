@@ -9,8 +9,13 @@ const styles = {
 
 const BizMenu = () => {
   return (
-    <div style={styles}>
-      This is the BizMenu component
+    <div className='tc dib br3 pa3 ma2 bw2 shadow-5' style={styles}>
+      <div>
+        <a className='grow' href='#'>Post Job</a>
+        <a href='#'>Browse Developers</a>
+        <a href='#'>Browse Jobs</a>
+        <a href='#'>Help</a>
+      </div>
     </div>
   );
 }
