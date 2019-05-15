@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import axios from 'axios';
 
 import LandingPage from './Pages/LandingPage';
 import Homepage from './Pages/Homepage';
@@ -8,6 +9,11 @@ import './App.css';
 import Profile from './Pages/ProfilePage/ProfilePage';
 
 class App extends React.Component {
+
+  handleClick = () => {
+    axios.get('/ping')
+      .then(response => console.log(response.data));
+  }
 
   render() {
     return (
