@@ -1,9 +1,9 @@
 import React from 'react';
-import NavBar from '../../components/NavBar/index';
-import Footer from '../../components/Footer/index';
-import BizMenu from '../../components/BizMenu/BizMenu';
-import DevMenu from '../../components/DevMenu/DevMenu';
-import Wall from '../../components/Wall/Wall';
+import NavBar from '../components/NavBar.js';
+import Footer from '../components/Footer.js';
+import BizMenu from '../components/BizMenu.js';
+import DevMenu from '../components/DevMenu.js';
+import Wall from '../components/Wall.js';
 
 const styles = {
   container: {

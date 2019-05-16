@@ -1,12 +1,10 @@
 import React from 'react';
-import NavBar from '../../components/NavBar';
-import Works from '../../components/Works';
-import Footer from '../../components/Footer';
+import Works from '../components/Works.js';
+import Footer from '../components/Footer.js';
 
 function HIWPage() {
     return (
         <div>
-            <NavBar />
             <Works />
             <Footer />
         </div>

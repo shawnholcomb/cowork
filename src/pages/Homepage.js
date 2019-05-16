@@ -1,9 +1,8 @@
 import React from 'react';
-import './Homepage.css';
-import NavBar from '../../components/NavBar';
-import HomeHeader from '../../components/HomeHeader';
-import HIWMain from '../../components/HIWMain';
-import Footer from '../../components/Footer';
+import HomeHeader from '../components/HomeHeader.js';
+import HIWMain from '../components/HIWMain.js';
+import Footer from '../components/Footer.js';
+
 
 class Homepage extends React.Component {
     state = {
@@ -13,10 +12,8 @@ class Homepage extends React.Component {
     render() {
         return (
             <div>
-                <NavBar />
                 <HomeHeader />
                 <HIWMain />
-                
                 <Footer />
             </div>
         )
