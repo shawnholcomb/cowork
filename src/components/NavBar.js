@@ -3,10 +3,6 @@ import {Link} from 'react-router-dom'
 const landingStyles = {
     h5: {
         color: '#fff'
-    },
-    border: {
-        borderBottom: '1px solid #f5f5f5',
-        boxShadow: '0 0 8px rgba(0, 0, 0, 0.25)'
     }
 }
 
