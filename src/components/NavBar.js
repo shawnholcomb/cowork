@@ -75,7 +75,7 @@ class NavBar extends React.Component {
                         to= {{
                             state: {isAuthModalOpen:true}
                         }} style={styles.a}><h5 style={this.state.isLandingPage ? landingStyles.h5 : styles.h5}>Sign In</h5></Link></li>
-                    </ul>
+                    </ul> 
                 </div>
             </nav>
         )
