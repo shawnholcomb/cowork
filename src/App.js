@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import NavBar from './components/NavBar';
-import LandingPage from './pages/LandingPage.js';
-import Homepage from './pages/Homepage.js';
-import HIWPage from './pages/HowItWorks.js';
-import Profile from './pages/ProfilePage';
+import LandingPage from './Pages/LandingPage.js';
+import Homepage from './Pages/Homepage.js';
+import HIWPage from './Pages/HowItWorks.js';
+import Profile from './Pages/ProfilePage';
 import AuthModal from './components/AuthModal.js';
 
 const styles = {

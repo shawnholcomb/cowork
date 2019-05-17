@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, } from "react-bootstrap";
 
-
-
-
-
-
 const signInStyle = {
   margin: "20 auto",
   textAlign: 'center'
