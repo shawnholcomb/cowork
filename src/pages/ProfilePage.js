@@ -1,9 +1,10 @@
-import React from 'react';
-import NavBar from '../components/NavBar.js';
+import React from './node_modules/react';
+// import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-import BizMenu from '../components/BizMenu.js';
+// import BizMenu from '../components/BizMenu.js';
 import DevMenu from '../components/DevMenu.js';
 import Wall from '../components/Wall.js';
+import BizMenu from '../components/BizMenu.js';
 
 const styles = {
   container: {
@@ -22,10 +23,9 @@ const Profile = () => {
   return (
     <div>
       <div>
-        <NavBar />
+        {/* <NavBar /> */}
         <div style={styles.container}>
           <div style={styles.profContainer}>
-            <BizMenu />
             <DevMenu />
               <div>
                 <Wall />
