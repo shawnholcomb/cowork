@@ -24,3 +24,30 @@ app.post('/login', (req, res) => {
 app.listen(process.env.PORT || 8080, () => {
     console.log("Listening...");
 });
+
+/*
+
+--- DEBUG CODE ---
+
+*** Authenticate users ***
+
+helper.authenticate('test@email.com', 'testpassword', success => {
+    if(success) console.log('authentication is working.');
+    else console.log('its not working.');
+})
+
+*** Select all accounts based on type ***
+
+helper.selectAccountsByType('Developer', response => {
+    response.forEach(value => {
+        console.log(value);
+    })
+})
+
+*** Grab an accounts type ***
+
+helper.selectAccountType('test@email.com', response => {
+    console.log(response);
+})
+
+*/
