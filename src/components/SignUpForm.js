@@ -8,12 +8,12 @@ import DeveloperSignUp from "./DeveloperSignUp";
 const busProfileTypeBtn ={
     textAlign:"center",
     marginLeft:"33px",
-    height: "150px",
+    height: "50px",
     width: "150px",
-    borderRadius: '75px',
+    borderRadius: '40px',
     fontSize:"22px",
     fontWeight:"900",
-    backgroundImage:'url(/images/businessSignupImg.png)',
+    backgroundImage:'radial-gradient(circle, blue, lightblue 1%, blue)',
     backgroundColor:"#cec1a1"
   }
   const devProfileTypeBtn ={

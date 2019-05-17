@@ -1,12 +1,8 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 const landingStyles = {
     h5: {
         color: '#fff'
-    },
-    border: {
-        borderBottom: '1px solid #f5f5f5',
-        boxShadow: '0 0 8px rgba(0, 0, 0, 0.25)'
     }
 }
 
@@ -71,8 +67,11 @@ class NavBar extends React.Component {
                 <div style={styles.navLogoLinks}>
                     <ul style={styles.navList}>
                         <li style={styles.navListLi}><a href="/works" style={styles.a}><h5 style={this.state.isLandingPage ? landingStyles.h5 : styles.h5}>How it Works</h5></a></li>
-                        <li style={styles.navListLi}><a href="/" style={styles.a}><h5 style={this.state.isLandingPage ? landingStyles.h5 : styles.h5}>Sign In</h5></a></li>
-                    </ul>
+                        <li style={styles.navListLi}><Link
+                        to= {{
+                            state: {isAuthModalOpen:true}
+                        }} style={styles.a}><h5 style={this.state.isLandingPage ? landingStyles.h5 : styles.h5}>Sign In</h5></Link></li>
+                    </ul> 
                 </div>
             </nav>
         )

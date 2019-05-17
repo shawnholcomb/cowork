@@ -7,7 +7,7 @@ import BusinessSignUp from "./BusinessSignUp"
 import DeveloperSignUp from "./DeveloperSignUp"
 
 const wrapperStyle = {
-  backgroundColor: "beige",
+  backgroundColor: "white",
   border: "2px blue solid",
   width: '400px',
   minHeight: '400px',
@@ -23,9 +23,9 @@ const wrapperStyle = {
 const exitBtnStyle = {
   height: "30px",
   width: "30px",
-  borderRadius: '35px',
+  borderRadius: '10px',
   position: 'relative',
-  right: "-370px",
+  right: "-385px",
   backgroundColor: "red",
   color: "white",
   fontWeight: "900",
@@ -40,8 +40,8 @@ const lineStyle = {
   width: "320px",
   textAlign: "center",
   marginTop: "20px",
-  height: "2px",
-  backgroundColor: 'blue'
+ 
+  backgroundColor: '#0075e3'
 }
 const formStyle = {
   margin: "0 auto",
