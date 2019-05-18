@@ -65,10 +65,10 @@ function Footer() {
                 </div>
                 <div>
                     <div style={styles.socialMedia}>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i class="fab fa-facebook-square"></i></h1></a>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i class="fab fa-twitter-square"></i></h1></a>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i class="fab fa-linkedin"></i></h1></a>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i class="fab fa-instagram"></i></h1></a>
+                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-facebook-square"></i></h1></a>
+                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-twitter-square"></i></h1></a>
+                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-linkedin"></i></h1></a>
+                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-instagram"></i></h1></a>
                     </div>
                 </div>
             </div>
