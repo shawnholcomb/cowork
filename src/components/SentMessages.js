@@ -8,13 +8,14 @@ const styles = {
   flex: 'row wrap',
   justifyContent: 'center',
   alignItems: 'center',
+  alignContent: 'space-around',
 }
 
 const SentMessages = () => {
   return (
     <div style={styles} className='br-pill shadow-5'>
       <div>
-        Sent Messages
+        <p>I'm not really into that kind of stuff but thanks for the offer</p>
       </div>
     </div>
   );

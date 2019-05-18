@@ -5,7 +5,7 @@ import SentMessages from './SentMessages';
 const styles = {
   container: {
     border: '1px solid grey',
-    width: 700,
+    maxwidth: 1200,
     height: 500,
     display: 'flex',
     background: 'white',
