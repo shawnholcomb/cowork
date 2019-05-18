@@ -8,14 +8,13 @@ const styles = {
   flex: 'row wrap',
   justifyContent: 'center',
   alignItems: 'center',
+  alignContent: 'space-around',
 }
 
 const ReceivedMessages = () => {
   return (
     <div style={styles} className='br-pill shadow-5'>
-      <div>
-        Received Messages
-      </div>
+      <p>Hello my name is Josh Beverly, I'm a local developer here in Dallas, I was wondering if we could bump weiners later?</p>
     </div>
   );
 }
