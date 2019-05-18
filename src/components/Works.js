@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const styles = {
     hiwContainer: {
@@ -48,6 +49,19 @@ const styles = {
     bottomBorder: {
         marginTop: '1em',
         borderBottom: '1px solid #777'
+    },
+    flex: {
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    button: {
+        background: '#0070dd',
+        color: '#fff',
+        padding: '10px 25px',
+        fontSize: '1.5em',
+        fontFamily: '"Heebo", sans-serif',
+        borderRadius: 20,
+        marginBottom: 40
     }
 }
 
@@ -82,6 +96,16 @@ function Works() {
                 </div>
                 <div>
                     <h1 style={styles.hiwFooterH1}>What are you waiting for?  Sign up now and get started connecting!</h1>
+                    <div style={styles.flex}>
+                        <Link
+                            to={{
+                                state: { isAuthModalOpen: true }
+                            }}>
+                            <button style={styles.button}>
+                                Get Started!
+                        </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
