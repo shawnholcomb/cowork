@@ -19,7 +19,8 @@ const styles = {
         textShadow: '2px 2px 2px rgba(0, 0, 0, 0.5)',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        fontFamily: '"Heebo", sans-serif'
     },
     devHeader: {
         background: 'url("/images/developer.png") right bottom no-repeat',
@@ -31,7 +32,8 @@ const styles = {
         textShadow: '2px 2px 2px rgba(0, 0, 0, 0.5)',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        fontFamily: '"Heebo", sans-serif'
     },
     leftMarg: {
         marginLeft: 50

@@ -17,7 +17,8 @@ const styles = {
     h1: {
         color: '#fff',
         marginBottom: '1em',
-        fontSize: '2em'
+        fontSize: '2em',
+        fontFamily: '"Heebo", sans-serif'
     }
 }
 

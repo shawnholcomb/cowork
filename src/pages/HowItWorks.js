@@ -2,9 +2,15 @@ import React from './node_modules/react';
 import Works from '../components/Works.js';
 import Footer from '../components/Footer.js';
 
+const styles = {
+    background: {
+        background: '#fafafa'
+    }
+}
+
 function HIWPage() {
     return (
-        <div>
+        <div style={styles.background}>
             <Works />
             <Footer />
         </div>

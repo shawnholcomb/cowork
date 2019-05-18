@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 import LandingPage from './pages/LandingPage.js';
 import Homepage from './pages/Homepage.js';
-import HIWPage from './pages/HowItWorks.js';
+import HowItWorks from './pages/HowItWorks.js';
 import Profile from './pages/ProfilePage';
 import AuthModal from './components/AuthModal.js';
 
@@ -38,10 +38,10 @@ class App extends React.Component {
         <div style={this.state.isLandingPage ? styles.landingPage : null}>
           <NavBar />
           <Switch>
-            <Route exact path='/' component={LandingPage} />
-            <Route exact path='/home' component={Homepage} />
-            <Route exact path='/profile' component={Profile} />
-            <Route exact path='/works' component={HIWPage} />
+            <Route exact path='/' component={ LandingPage } />
+            <Route exact path='/home' component={ Homepage}  />
+            <Route exact path='/profile' component={ Profile } />
+            <Route exact path='/works' component={ HowItWorks} />
           </Switch>
           <AuthModal />
 

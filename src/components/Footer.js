@@ -3,7 +3,7 @@ import React from 'react';
 const styles = {
     footer: {
         minHeight: 60,
-        background: '#0078df',
+        background: '#fafafa',
         padding: '2em'
     },
     footerContents: {
@@ -12,16 +12,19 @@ const styles = {
     },
     footerH1: {
         marginRight: '1em',
-        color: '#0050b2'
+        color: '#777',
+        fontFamily: '"Heebo", sans-serif'
     },
     footerH4: {
-        margin: '0.1em 0',
-        color: '#0050b2',
-        fontWeight: 'normal'
+        margin: '0.1em 0.2em',
+        color: '#777',
+        fontWeight: 'normal',
+        fontFamily: '"Heebo", sans-serif'
     },
     H4: {
         margin: '0.3em 0',
-        color: '#0050b2',
+        color: '#777',
+        fontFamily: '"Heebo", sans-serif'
     },
     socialMedia: {
         display: 'flex',
@@ -36,7 +39,7 @@ const styles = {
     },
     bottomBorder: {
         marginTop: '1em',
-        borderBottom: '1px solid #0050b2',
+        borderBottom: '1px solid #777',
         paddingBottom: '1.5em'
     }
 }
@@ -46,7 +49,7 @@ function Footer() {
         <footer style={styles.footer}>
             <div style={styles.footerContents}>
                 <div>
-                    <img alt="Company logo" src='/images/dclogo-blue.png'></img>
+                    <img alt="Company logo" src='/images/dclogo-gray.png'></img>
                 </div>
                 <div style={styles.flex}>
                     <a href='/home' style={styles.a}><h4 style={styles.footerH4}>Terms of Service</h4></a>

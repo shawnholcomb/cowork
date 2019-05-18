@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 const landingStyles = {
-    h5: {
+    h4: {
         color: '#fff'
     }
 }
@@ -21,7 +21,7 @@ const styles = {
     h1: {
         margin: 0
     },
-    h5: {
+    h4: {
         color: '#0078df'
     },
     navLogoLinks: {
@@ -31,7 +31,8 @@ const styles = {
     navList: {
         display: 'flex',
         direction: 'row',
-        listStyleType: 'none'
+        listStyleType: 'none',
+        fontFamily: '"Heebo", sans-serif'
     },
     navListLi: {
         paddingRight: 30
@@ -66,11 +67,11 @@ class NavBar extends React.Component {
                 </div>
                 <div style={styles.navLogoLinks}>
                     <ul style={styles.navList}>
-                        <li style={styles.navListLi}><a href="/works" style={styles.a}><h5 style={this.state.isLandingPage ? landingStyles.h5 : styles.h5}>How it Works</h5></a></li>
+                        <li style={styles.navListLi}><a href="/works" style={styles.a}><h4 style={this.state.isLandingPage ? landingStyles.h4 : styles.h4}>How it Works</h4></a></li>
                         <li style={styles.navListLi}><Link
                         to= {{
                             state: {isAuthModalOpen:true}
-                        }} style={styles.a}><h5 style={this.state.isLandingPage ? landingStyles.h5 : styles.h5}>Sign In</h5></Link></li>
+                        }} style={styles.a}><h4 style={this.state.isLandingPage ? landingStyles.h4 : styles.h4}>Sign In</h4></Link></li>
                     </ul> 
                 </div>
             </nav>
