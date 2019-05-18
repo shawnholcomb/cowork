@@ -4,7 +4,6 @@ import HIWMain from '../components/HIWMain.js';
 import FeaturedDev from '../components/FeaturedDev';
 import Footer from '../components/Footer.js';
 
-
 class Homepage extends React.Component {
     state = {
         status: "default",
