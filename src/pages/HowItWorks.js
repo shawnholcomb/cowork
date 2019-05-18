@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import Works from '../components/Works.js';
 import Footer from '../components/Footer.js';
 

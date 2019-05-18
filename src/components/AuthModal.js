@@ -3,8 +3,8 @@ import { Button, FormGroup, FormControl, } from "react-bootstrap";
 import { withRouter } from "react-router"
 import { Link } from "react-router-dom"
 import SignUpForm from "./SignUpForm"
-import BusinessSignUp from "./BusinessSignUp"
-import DeveloperSignUp from "./DeveloperSignUp"
+
+
 
 const wrapperStyle = {
   backgroundColor: "white",
@@ -120,7 +120,7 @@ class SignInForm extends Component {
               style={inputStyle}
             />
           </FormGroup>
-          <Button
+          <Button className ="grow pointer"
             block
             bssize="large"
             disabled={!this.validateForm()}
@@ -153,8 +153,8 @@ class AuthModal extends React.Component {
 
             {this.state.isSignIn ? <SignInForm /> : <SignUpForm />}
             {this.state.isSignIn ?
-              <h3 style={createStyle}>Not registered? <a className="pointer f4 fw6 db dark-blue no-underline underline-hover" onClick={() => this.setState({ isSignIn: false })}>Create an account</a></h3> :
-              <h3 style={createStyle}>Already have an account? <a className="pointer f4 fw6 db dark-blue no-underline underline-hover" onClick={() => this.setState({ isSignIn: true })}>Sign In</a></h3>
+              <h3 style={createStyle}>Not registered? <a className=" grow pointer f4 fw6 db dark-blue no-underline underline-hover" onClick={() => this.setState({ isSignIn: false })}>Create an account</a></h3> :
+              <h3 style={createStyle}>Already have an account? <a  className=" grow pointer f4 fw6 db dark-blue no-underline underline-hover" onClick={() => this.setState({ isSignIn: true })}>Sign In</a></h3>
             }
           </div>}
           

@@ -134,7 +134,7 @@ class BusinessSignUp extends Component {
                                 style={inputStyle}
                             />
                         </FormGroup>
-                        <Button
+                        <Button className ="grow pointer"
                             block
                             bssize="large"
                             disabled={!this.validateForm()}

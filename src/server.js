@@ -11,14 +11,8 @@ app.get('/ping', (req, res) => {
     return res.send('pong');
 })
 
-app.post('/login', (req, res) => {
-    let email = req.body.email;
-    let password = md5(req.body.password);
-
-    helper.authenticate(email, password, result => {
-        if(result) console.log('authenticated!');
-        else console.log('auth failed.');
-    })
+app.get('/signup/:email', (req, res) => {
+    console.dir(req.params.email);
 })
 
 app.listen(process.env.PORT || 8080, () => {

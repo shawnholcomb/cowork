@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import HomeHeader from '../components/HomeHeader.js';
 import HIWMain from '../components/HIWMain.js';
 import FeaturedDev from '../components/FeaturedDev';

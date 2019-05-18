@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const styles = {
   container: {
@@ -23,7 +24,11 @@ const DevMenu = () => {
   return (
     // <div className='br3 pa3 ma2 bw2 shadow-5' style={styles.container}>
       <ul style={styles.list}>
-        <li className='grow pointer'>My Jobs</li>
+        <li className='grow pointer'>
+        <Link
+                        to= {{
+                            state: {isPostJobModalOpen:true}
+                        }} ></Link>My Jobs</li>
         <li className='grow pointer'>Saved Jobs</li>
         <li className='grow pointer'>Browse Jobs</li>
         <li className='grow pointer'>Browse Developers</li>
