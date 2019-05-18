@@ -6,6 +6,8 @@ const styles = {
         maxWidth: 1200,
         margin: '0 auto',
         padding: '1em',
+        marginTop: '1em',
+        borderBottom: '1px solid #777'
     },
     hiwHeaderH1: {
         textAlign: 'center',
@@ -67,7 +69,7 @@ const styles = {
 
 function Works() {
     return (
-        <div style={styles.bottomBorder}>
+        <div>
             <div className="header-image" style={styles.headerImage}></div>
             <div style={styles.hiwContainer}>
                 <div className="hiw-header">
