@@ -4,15 +4,18 @@ const styles = {
     hiwContainer: {
         maxWidth: 1200,
         margin: '0 auto',
-        padding: '1em'
+        padding: '1em',
     },
     hiwHeaderH1: {
         textAlign: 'center',
-        fontWeight: 500
+        fontWeight: 500,
+        fontFamily: '"Heebo", sans-serif',
+        color: '#777'
     },
     hiwUl: {
         listStyleType: 'none',
-        marginTop: 25
+        marginTop: 25,
+        fontFamily: '"Heebo", sans-serif'
     },
     hiwLi: {
         display: 'flex',
@@ -21,7 +24,7 @@ const styles = {
         marginBottom: 30
     },
     hiwLiH3: {
-        color: '#000',
+        color: '#777',
         fontWeight: 500
     },
     hiwLiImg: {
@@ -38,20 +41,26 @@ const styles = {
     hiwFooterH1: {
         textAlign: 'center',
         fontWeight: 500,
-        margin: 50
+        margin: 50,
+        fontFamily: '"Heebo", sans-serif',
+        color: '#777'
+    },
+    bottomBorder: {
+        marginTop: '1em',
+        borderBottom: '1px solid #777'
     }
 }
 
 function Works() {
     return (
-        <div>
+        <div style={styles.bottomBorder}>
             <div className="header-image" style={styles.headerImage}></div>
             <div style={styles.hiwContainer}>
                 <div className="hiw-header">
                     <h1 style={styles.hiwHeaderH1}>DevConnect is connecting businesses and developers in your community!  You now have the ability to work with and support local professionals and companies.</h1>
                 </div>
                 <hr></hr>
-                <div>
+                <div style={styles.bottomBorder}>
                     <ul style={styles.hiwUl}>
                         <li style={styles.hiwLi}>
                             <img style={styles.hiwLiImg} alt="icon" src="/images/signup.png"></img>
@@ -71,7 +80,6 @@ function Works() {
                         </li>
                     </ul>
                 </div>
-                <hr></hr>
                 <div>
                     <h1 style={styles.hiwFooterH1}>What are you waiting for?  Sign up now and get started connecting!</h1>
                 </div>

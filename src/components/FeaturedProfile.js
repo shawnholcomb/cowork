@@ -16,16 +16,19 @@ const styles = {
         alignItems: 'center',
         width: 200,
         padding: 30,
-        boxShadow: '0 5px 5px rgba(0, 0, 0, 0.25)'
+        boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.25)'
     },
     headshot: {
         borderRadius: '50%'
     },
     smallMargin: {
-        margin: '.4em'
+        margin: '.5em',
+        fontFamily: '"Heebo", sans-serif'
     },
     lightWeight: {
-        fontWeight: 'normal'
+        fontWeight: 'normal',
+        fontFamily: '"Heebo", sans-serif',
+        margin: '1em'
     }
 }
 

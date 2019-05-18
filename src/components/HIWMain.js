@@ -2,18 +2,24 @@ import React from 'react';
 
 const styles = {
     mainDiv: {
-        background: '#f5f5f5'
+        background: '#fafafa'
+    },
+    Header: {
+        maxWidth: 1200,
+        margin: '0 auto',
+        padding: '6em 0 2em 0'
     },
     HIW: {
         display: 'flex',
         direction: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         maxWidth: 1200,
         margin: '0 auto',
-        padding: '8em 0'
+        padding: '0 0 8em 0'
     },
     HIWStepsH3: {
-        color: '#696969',
+        color: '#777',
+        fontFamily: '"Heebo", sans-serif'
     },
     HIWStep: {
         height: 250,
@@ -27,12 +33,21 @@ const styles = {
     },
     image: {
         maxWidth: 200
+    },
+    h1: {
+        margin: 0,
+        color: '#777',
+        fontFamily: '"Heebo", sans-serif'
+
     }
 }
 
 function HIWMain() {
     return (
         <div style={styles.mainDiv}>
+            <div style={styles.Header}>
+                <h1 style={styles.h1}>The Process is Simple!</h1>
+            </div>
             <div style={styles.HIW}>
                 <div style={styles.HIWStep}>
                     <img src='/images/signup.png' alt="Sign Up" style={styles.image}></img>
