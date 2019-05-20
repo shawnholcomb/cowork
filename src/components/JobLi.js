@@ -5,10 +5,13 @@ const styles = {
         listStyleType: 'none',
         maxWidth: 1200,
         margin: '0 auto',
-        padding: '1.5em',
+        padding: '0.5em 1em',
         fontFamily: '"Heebo", sans-serif',
-        border: '1px solid #777',
-
+        background: '#fff',
+        borderRadius: 12,
+        width: 900,
+        border: '1px solid rgba(119,119,119,0.1)',
+        marginBottom: 5
     },
     lightWeight: {
         fontWeight: 'normal',
@@ -18,7 +21,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between'
     },
-    h3: {
+    h4: {
         marginBottom: 0
     },
     underline: {
@@ -28,18 +31,30 @@ const styles = {
     }
 }
 
-function JobLi() {
+const JobLi = () => {
     return (
-        <li style={styles.container}>
+        <div>
+        <li className='grow pointer' style={styles.container}>
             <div style={styles.flex}>
-                <h3 style={styles.h3}>Looking for landing page for new startup</h3>
-                <h3 style={styles.h3}>Compensation: $300</h3>
+                <h4 style={styles.h4}>Looking for landing page for new startup</h4>
+                <h4 style={styles.h4}>Compensation: $300</h4>
             </div>
             <div>
-                <h4 style={styles.lightWeight}>New startup SmashApp has a mobile app in development but we are currently advertising for the state-of-the-art matchmaking app.  We need a developer to design a landing page for our website.  Looking for someone with high level design abilities to create a modern, colorful, breath-taking page to help encourage excitement!</h4>
-                <h4 style={styles.underline}>Click to learn more</h4>
+                <h5 style={styles.lightWeight}>New startup SmashApp has a mobile app in development but we are currently advertising for the state-of-the-art matchmaking app.  We need a developer to design a landing page for our website.  Looking for someone with high level design abilities to create a modern, colorful, breath-taking page to help encourage excitement!</h5>
+                <h5 style={styles.underline}>Click to learn more</h5>
             </div>
         </li>
+        <li className='grow pointer' style={styles.container}>
+            <div style={styles.flex}>
+                <h4 style={styles.h4}>Looking for landing page for new startup</h4>
+                <h4 style={styles.h4}>Compensation: $300</h4>
+            </div>
+            <div>
+                <h5 style={styles.lightWeight}>New startup SmashApp has a mobile app in development but we are currently advertising for the state-of-the-art matchmaking app.  We need a developer to design a landing page for our website.  Looking for someone with high level design abilities to create a modern, colorful, breath-taking page to help encourage excitement!</h5>
+                <h5 style={styles.underline}>Click to learn more</h5>
+            </div>
+        </li>
+        </div>
     )
 }
 

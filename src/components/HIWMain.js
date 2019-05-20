@@ -7,7 +7,7 @@ const styles = {
     Header: {
         maxWidth: 1200,
         margin: '0 auto',
-        padding: '6em 0 2em 0'
+        padding: '6em 20px 2em 20px'
     },
     HIW: {
         display: 'flex',
@@ -42,7 +42,7 @@ const styles = {
     }
 }
 
-function HIWMain() {
+const HIWMain = () => {
     return (
         <div style={styles.mainDiv}>
             <div style={styles.Header}>

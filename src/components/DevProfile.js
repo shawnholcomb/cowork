@@ -52,7 +52,7 @@ const styles = {
     }
 }
 
-function DevProfile() {
+const DevProfile = () => {
     return (
         <div style={styles.bg}>
             <div style={styles.container}>
