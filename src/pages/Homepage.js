@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeHeader from '../components/HomeHeader.js';
 import HIWMain from '../components/HIWMain.js';
-import FeaturedDev from '../components/FeaturedDev';
+import FeaturedDev from '../components/FeaturedDev'; 
 import Footer from '../components/Footer.js';
 
 class Homepage extends React.Component {

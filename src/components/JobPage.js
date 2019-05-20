@@ -23,7 +23,7 @@ const styles = {
     }
 }
 
-function JobPage() {
+const JobPage = () => {
     return (
         <div style={styles.container}>
             <div>

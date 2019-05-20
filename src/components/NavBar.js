@@ -9,10 +9,12 @@ const landingStyles = {
 const styles = {
     nav: {
         maxHeight: 60,
-        padding: '0.1rem 1.5rem',
+        padding: '0.1rem 20px',
         display: 'flex',
         direction: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        maxWidth: 1200,
+        margin: '0 auto'
     },
     a: {
         textDecoration: 'none',
@@ -41,6 +43,9 @@ const styles = {
         display: 'flex',
         direction: 'row',
         justifyContent: 'flex-end'
+    },
+    logo: {
+        width: 224
     }
 }
 
@@ -63,7 +68,7 @@ class NavBar extends React.Component {
         return (
             <nav style={styles.nav}>
                 <div style={styles.navLogoLinks}>
-                    <a href='/home'><img alt="devconnect logo" src={this.state.isLandingPage ? "images/dclogo-white.png" : "images/dclogo-color.png"}></img></a>
+                    <a href='/home'><img style={styles.logo} alt="devconnect logo" src={this.state.isLandingPage ? "images/dclogo-white.png" : "images/dclogo-color.png"}></img></a>
                 </div>
                 <div style={styles.navLogoLinks}>
                     <ul style={styles.navList}>

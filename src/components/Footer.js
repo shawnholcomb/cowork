@@ -4,11 +4,12 @@ const styles = {
     footer: {
         minHeight: 60,
         background: '#fafafa',
-        padding: '2em'
+        padding: '1.5em'
     },
     footerContents: {
         maxWidth: 1200,
-        margin: '0 auto'
+        margin: '0 auto',
+        padding: '0 20px'
     },
     footerH1: {
         marginRight: '1em',
@@ -16,7 +17,7 @@ const styles = {
         fontFamily: '"Heebo", sans-serif'
     },
     footerH4: {
-        margin: '0.1em 0.2em',
+        margin: '0.3em',
         color: '#777',
         fontWeight: 'normal',
         fontFamily: '"Heebo", sans-serif'
@@ -29,7 +30,9 @@ const styles = {
     socialMedia: {
         display: 'flex',
         direction: 'row',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        borderTop: '1px solid #777',
+        marginTop: '1em'
     },
     a: {
         textDecoration: 'none'
@@ -37,38 +40,33 @@ const styles = {
     flex: {
         display: 'flex'
     },
-    bottomBorder: {
-        marginTop: '1em',
-        borderBottom: '1px solid #777',
-        paddingBottom: '1.5em'
+    logo: {
+        width: 200,
+        marginBottom: 10
     }
 }
 
-function Footer() {
+const Footer = () => {
     return (
         <footer style={styles.footer}>
             <div style={styles.footerContents}>
                 <div>
-                    <img alt="Company logo" src='/images/dclogo-gray.png'></img>
+                    <img style={styles.logo} alt="Company logo" src='/images/dclogo-gray.png'></img>
                 </div>
                 <div style={styles.flex}>
-                    <a href='/home' style={styles.a}><h4 style={styles.footerH4}>Terms of Service</h4></a>
+                    <a href='/home' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Terms of Service</h4></a>
                     <h4 style={styles.footerH4}>|</h4>
-                    <a href='/home' style={styles.a}><h4 style={styles.footerH4}>Privacy Policy</h4></a>
+                    <a href='/home' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Privacy Policy</h4></a>
                 </div>
                 <div>
                     <h5 style={styles.footerH4}>&copy; 2019 DevConnect</h5>
                 </div>
-                <div style={styles.bottomBorder}>
-                    <a href='/home' style={styles.a}><h4 style={styles.H4}>How it Works</h4></a>
-                    <a href='/home' style={styles.a}><h4 style={styles.H4}>Sign In</h4></a>
-                </div>
                 <div>
                     <div style={styles.socialMedia}>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-facebook-square"></i></h1></a>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-twitter-square"></i></h1></a>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-linkedin"></i></h1></a>
-                        <a href='/home' style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-instagram"></i></h1></a>
+                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-facebook-square"></i></h1></a>
+                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-twitter-square"></i></h1></a>
+                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-linkedin"></i></h1></a>
+                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-instagram"></i></h1></a>
                     </div>
                 </div>
             </div>

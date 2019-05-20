@@ -1,10 +1,18 @@
 import React from 'react';
 
-function Ul(props) {
+const styles = {
+    ul: {
+        width: '100%',
+        minHeight: '65vh',
+    }
+}
+const Ul = (props) => {
     return (
-        <ul>
-            {props.children}
-        </ul>
+        <div style={styles.ul}>
+            <ul style={styles.ul}>
+                {props.children}
+            </ul>
+        </div>
     )
 }
 
