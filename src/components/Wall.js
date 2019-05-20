@@ -4,11 +4,12 @@ import ComposeMessage from './ComposeMessage';
 
 const styles = {
   container: {
-    width: 950,
-    height: '70vh',
+    width: 960,
+    height: '75vh',
     position: 'relative',
-    padding: '1em 0',
-    overflow: 'scroll'
+    padding: '1em 0 0 0',
+    overflow: 'hidden',
+    background: '#fafafa'
   }
 }
 

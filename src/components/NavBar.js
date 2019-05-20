@@ -1,13 +1,6 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import MainNav from "./MainNav";
 import SignedIn from "./SignedIn";
-
-// const landingStyles = {
-//   h4: {
-//     color: "#fff"
-//   }
-// };
 
 const styles = {
   nav: {
@@ -15,7 +8,9 @@ const styles = {
     padding: "0.1rem 1.5rem",
     display: "flex",
     direction: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    maxWidth: 1200,
+    margin: '0 auto'
   },
   a: {
     textDecoration: "none",
@@ -44,6 +39,10 @@ const styles = {
     display: "flex",
     direction: "row",
     justifyContent: "flex-end"
+  },
+  logo: {
+      width: 200,
+      marginBottom: 10
   }
 };
 
@@ -68,7 +67,8 @@ class NavBar extends React.Component {
       <nav style={styles.nav}>
         <div style={styles.navLogoLinks}>
           <a href="/home">
-            <img
+            <img 
+              style={styles.logo}
               alt="devconnect logo"
               src={
                 this.state.isLandingPage

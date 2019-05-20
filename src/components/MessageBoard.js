@@ -3,11 +3,11 @@ import Message from './Message';
 
 const styles = {
     container: {
-        width: 950,
+        width: 980,
         height: '100%',
         position: 'relative',
-        padding: '1em 0',
-        overflow: 'scroll',
+        padding: '0 4px 132px 0',
+        overflowY: 'scroll',
         borderRadius: 10
     }
 }

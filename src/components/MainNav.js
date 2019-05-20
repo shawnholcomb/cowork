@@ -1,12 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// const landingStyles = {
-//   h4: {
-//     color: "#fff"
-//   }
-// };
-
 const styles = {
   nav: {
     maxHeight: 60,
@@ -17,7 +11,11 @@ const styles = {
   },
   a: {
     textDecoration: "none",
-    color: "inherit"
+    color: "#0070dd"
+  },
+  aLanding: {
+    textDecoration: "none",
+    color: '#fff'
   },
   h1: {
     margin: 0
@@ -45,32 +43,52 @@ const styles = {
   }
 };
 
-const MainNav = () => {
-  return (
-    <div style={styles.navLogoLinks}>
-      <ul style={styles.navList}>
-        <li style={styles.navListLi}>
-          <a href="/works" style={styles.a}>
-            <h4>
-              How it Works
+class MainNav extends React.Component {
+  state = {
+    isLandingPage: false
+  }
+
+  isLanding = () => {
+    if (window.location.pathname === "/") {
+      this.setState({ isLandingPage: true });
+    }
+  };
+
+  componentDidMount() {
+    this.isLanding();
+  }
+
+  render() {
+    return (
+      <div style={styles.navLogoLinks}>
+        <ul style={styles.navList}>
+          <li style={styles.navListLi}>
+            <a href="/works"
+              style={this.state.isLandingPage
+                ? styles.aLanding
+                : styles.a}>
+              <h4 className="underline-hover">
+                How it Works
             </h4>
-          </a>
-        </li>
-        <li style={styles.navListLi}>
-          <Link
-            to={{
-              state: { isAuthModalOpen: true }
-            }}
-            style={styles.a}
-          >
-            <h4>
-              Sign In
+            </a>
+          </li>
+          <li style={styles.navListLi}>
+            <Link
+              to={{
+                state: { isAuthModalOpen: true }
+              }}
+              style={this.state.isLandingPage
+                ? styles.aLanding
+                : styles.a}>
+              <h4 className="underline-hover">
+                Sign In
             </h4>
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+            </Link>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+}
 
 export default MainNav;

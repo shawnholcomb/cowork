@@ -8,7 +8,7 @@ const styles = {
         width: '100%',
         height: 'auto',
         position: 'absolute',
-        bottom: 0
+        bottom: 0,
     },
     composeDiv: {
         padding: '0.8em',
@@ -59,7 +59,7 @@ const ComposeMessage = () => {
                 <div style={styles.inputDiv}>
                     <img style={styles.profilePic} src="/images/defaultProfilePic.png" alt="current profile pic"></img>
                     <input style={styles.input} type='text' placeholder="Enter your message here"></input>
-                    <button className="dim" style={styles.button}>Submit</button>
+                    <button className="dim pointer" style={styles.button}>Submit</button>
                 </div>
             </div>
     );
