@@ -1,42 +1,51 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
+const landingStyles = {
+  h5: {
+    color: "#fff"
+  }
+};
 const styles = {
   container: {
-    border: '1px solid grey',
+    border: "1px solid grey",
     width: 200,
     height: 400,
-    display: 'flex',
-    flexFlow: 'column nowrap',
+    display: "flex",
+    flexFlow: "column nowrap"
   },
   list: {
-    color: '#0070dd',
-    fontWeight: 'bold',
-    display: 'flex',
-    flexFlow: 'column wrap',
-    listStyleType: 'none',
-    justifyContent: 'flex-start',
-    lineHeight: 1.5,
+    color: "#0070dd",
+    fontWeight: "bold",
+    display: "flex",
+    flexFlow: "column wrap",
+    listStyleType: "none",
+    justifyContent: "flex-start",
+    lineHeight: 1.5
   }
-}
+};
 
 const DevMenu = () => {
   return (
     // <div className='br3 pa3 ma2 bw2 shadow-5' style={styles.container}>
-      <ul style={styles.list}>
-        <li className='grow pointer'>
+    <ul style={styles.list}>
+      <li className="grow pointer" style={styles.list}>
         <Link
-                        to= {{
-                            state: {isPostJobModalOpen:true}
-                        }} ></Link>My Jobs</li>
-        <li className='grow pointer'>Saved Jobs</li>
-        <li className='grow pointer'>Browse Jobs</li>
-        <li className='grow pointer'>Browse Developers</li>
-        <li className='grow pointer'>Developer Resources</li>
-        <li className='grow pointer'>Help</li>
-      </ul>
+          to={{
+            state: { isPostJob: true }
+          }}
+        >
+          <h5>Sign In</h5>
+        </Link>
+      </li>
+      
+      <li className="grow pointer">Saved Jobs</li>
+      <li className="grow pointer">Browse Jobs</li>
+      <li className="grow pointer">Browse Developers</li>
+      <li className="grow pointer">Developer Resources</li>
+      <li className="grow pointer">Help</li>
+    </ul>
     // </div>
   );
-}
+};
 
 export default DevMenu;

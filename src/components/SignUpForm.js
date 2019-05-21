@@ -75,7 +75,8 @@ class SignUpForm extends Component {
         email: "",
         password: "",
         mode:null, //null developer or business,
-        dropdown: 'Developer'
+        dropdown: 'Developer',
+        terms: false
        
       };
     }
@@ -170,12 +171,23 @@ class SignUpForm extends Component {
             style={inputStyle}
         />
     </FormGroup>
-    <select onChange={this.onChange}>
+    <FormGroup><select onChange={this.onChange}>
   <option value="developer">Developer</option>
   <option value="business">Business</option>
   
 </select>
-
+</FormGroup>
+<FormGroup>
+<label>
+          accept {}: 
+          <input
+            name="terms"
+            type="checkbox"
+            checked={this.state.terms}
+            onChange={this.handleInputChange} />
+        </label>
+        
+        </FormGroup>
     
     <Button className ="grow pointer"
         block

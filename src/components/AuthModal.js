@@ -21,15 +21,10 @@ const wrapperStyle = {
 
 }
 const exitBtnStyle = {
-  height: "30px",
-  width: "30px",
-  borderRadius: '10px',
-  position: 'relative',
-  right: "-385px",
-  backgroundColor: "red",
-  color: "white",
-  fontWeight: "900",
-  fontSize: '15px'
+color:"grey",
+float:"right",
+
+
 }
 const signInStyle = {
   margin: "20 auto",
@@ -140,18 +135,18 @@ class SignInForm extends Component {
 
 class AuthModal extends React.Component {
   state = {
-    isSignIn: false,
+    isSignIn: true,
   }
 
+  
 
   render() {
     return (
       <React.Fragment>
         {this.props.location.state && this.props.location.state.isAuthModalOpen &&
           <div className="Login" style={wrapperStyle}>
-            <Link to={{ state: { isAuthModalOpen: false } }} style={exitBtnStyle}>×</Link>
-
-            {this.state.isSignIn ? <SignInForm /> : <SignUpForm />}
+            <Link to={{ state: { isAuthModalOpen: false } }} style={exitBtnStyle}><i class="far fa-times-circle"></i></Link>
+                 {this.state.isSignIn ? <SignInForm /> : <SignUpForm />}
             {this.state.isSignIn ?
               <h3 style={createStyle}>Not registered? <a className=" grow pointer f4 fw6 db dark-blue no-underline underline-hover" onClick={() => this.setState({ isSignIn: false })}>Create an account</a></h3> :
               <h3 style={createStyle}>Already have an account? <a  className=" grow pointer f4 fw6 db dark-blue no-underline underline-hover" onClick={() => this.setState({ isSignIn: true })}>Sign In</a></h3>

@@ -29,6 +29,7 @@ const Profile = () => {
             <DevMenu />
               <div>
                 <Wall />
+                
               </div>
           </div>
         </div>
