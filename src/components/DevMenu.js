@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const landingStyles = {
-  h5: {
-    color: "#fff"
-  }
-};
+
 const styles = {
   container: {
     border: "1px solid grey",

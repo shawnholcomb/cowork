@@ -2,34 +2,7 @@ import React, { Component } from "react";
 import { Button,FormGroup, FormControl,} from "react-bootstrap";
 import axios from 'axios';
 
-
-
-
-const busProfileTypeBtn ={
-    textAlign:"center",
-    marginLeft:"33px",
-    height: "50px",
-    width: "150px",
-    borderRadius: '40px',
-    fontSize:"22px",
-    fontWeight:"900",
-    backgroundImage:'radial-gradient(circle, blue, lightblue 1%, blue)',
-    backgroundColor:"#cec1a1"
-  }
-  const devProfileTypeBtn ={
-    textAlign:"center",
-    marginLeft:"33px",
-    height: "150px",
-    width: "150px",
-    borderRadius: '75px',
-    fontSize:"22px",
-    fontWeight:"900",
-    color:'black',
-    backgroundImage:'url(/images/developerSignUpImg.jpg)',
-    backgroundPosition: 'center'
-  }
-  
-  
+ 
   const signInStyle = {
     margin: "20 auto",
     textAlign: 'center'
@@ -76,13 +49,14 @@ class SignUpForm extends Component {
         password: "",
         mode:null, //null developer or business,
         dropdown: 'Developer',
+        rePassword: "",
         terms: false
        
       };
     }
   
     validateForm() {
-      return this.state.email.length > 0 && this.state.password.length > 0;
+      return this.state.email.length > 0 && this.state.password.length > 0 && this.state.rePassword === this.state.password;
     }
   
     handleChange = event => {

@@ -7,6 +7,7 @@ import Homepage from './pages/Homepage.js';
 import HIWPage from './pages/HowItWorks.js';
 import Profile from './pages/ProfilePage';
 import AuthModal from './components/AuthModal.js';
+import PostJob from './components/PostJob';
 
 const styles = {
   landingPage: {
@@ -44,6 +45,7 @@ class App extends React.Component {
             <Route exact path='/works' component={HIWPage} />
           </Switch>
           <AuthModal />
+          <PostJob />
 
         </div>
       </Router>

@@ -24,7 +24,7 @@ const BizMenu = () => {
         <li className='grow pointer'>Post Job
         <Link
                         to= {{
-                            state: {postJobModalOpen:true}
+                            state: {isPostJob:true}
                         }} ></Link>
         </li>
         <li className='grow pointer'>Browse Developers</li>

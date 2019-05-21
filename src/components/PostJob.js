@@ -1,33 +1,11 @@
-import React, { Component, View } from "react";
+import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
-import SignUpForm from "./SignUpForm";
-import AuthModal from "./AuthModal";
+import Modal from "./Modal"
 
-const wrapperStyle = {
-  backgroundColor: "white",
-  border: "2px blue solid",
-  width: "400px",
-  minHeight: "400px",
-  margin: "0 auto",
-  borderRadius: "10px",
-  position: "fixed",
-  top: "50%",
-  transform: "translateY(-50%) translateX(-50%)",
-  left: "50%"
-};
-const exitBtnStyle = {
-  height: "30px",
-  width: "30px",
-  borderRadius: "10px",
-  position: "relative",
-  right: "-385px",
-  backgroundColor: "red",
-  color: "white",
-  fontWeight: "900",
-  fontSize: "15px"
-};
+
+
+
 const signInStyle = {
   margin: "20 auto",
   textAlign: "center"
@@ -56,16 +34,9 @@ const bttnStyle = {
   width: "60px",
   fontSize: "15px"
 };
-const createStyle = {
-  textAlign: "center"
-};
-const backGroundTest = {
-  backgroundColor: "red",
-  height: "500px",
-  width: "500px"
-};
 
-class SignInForm extends Component {
+
+class PostJob extends Component {
   constructor(props) {
     super(props);
 
@@ -94,7 +65,10 @@ class SignInForm extends Component {
 
   render() {
     return (
-      <div>
+      <Modal isopen={
+        this.props.location.state &&
+        this.props.location.state.isPostJob
+      }>
         <h1 style={signInStyle}>Post Job</h1>
         <hr style={lineStyle} />
         <form onSubmit={this.handleSubmit} style={formStyle}>
@@ -121,7 +95,7 @@ class SignInForm extends Component {
               value={this.state.desription}
               onChange={this.handleChange}
               placeholder="desription"
-              type="text"
+              type="textarea"
               style={inputStyle}
             />
           </FormGroup>
@@ -129,37 +103,17 @@ class SignInForm extends Component {
             className="grow pointer"
             block
             bssize="large"
-            disabled={!this.validateForm()}
             type="Post "
             style={bttnStyle}
           >
             Login
           </Button>
         </form>
-      </div>
+      </Modal>
     );
   }
 }
 
-class PostJob extends React.Component {
-  state = {
-    isPostJob: true
-  };
-  renderElement() {
-    if (this.state.isPostJob === true)
-      return (
-        <div style={wrapperStyle}>
-          <h1>hello finally working </h1>
-        </div>
-      );
-    return null;
-  }
 
-  render() {
-    return <React>
-    <View>{this.renderElement()}</View>
-    </React>;
-  }
-}
 
 export default withRouter(PostJob);
