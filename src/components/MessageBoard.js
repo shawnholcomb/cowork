@@ -4,9 +4,9 @@ import Message from './Message';
 const styles = {
     container: {
         width: 980,
-        height: '100%',
+        height: 620,
         position: 'relative',
-        padding: '0 4px 132px 0',
+        padding: '0 4px 0 0',
         overflowY: 'scroll',
         borderRadius: 10
     }

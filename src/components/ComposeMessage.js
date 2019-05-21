@@ -36,8 +36,9 @@ const styles = {
     button: {
         background: '#0070dd',
         color: '#fff',
-        padding: '0 1em',
+        padding: '0.5em 1em',
         fontFamily: '"Heebo", sans-serif',
+        fontSize: '1.2em',
         borderRadius: 10,
         margin: '1.3em 1em'
     },
@@ -59,7 +60,7 @@ const ComposeMessage = () => {
                 <div style={styles.inputDiv}>
                     <img style={styles.profilePic} src="/images/defaultProfilePic.png" alt="current profile pic"></img>
                     <input style={styles.input} type='text' placeholder="Enter your message here"></input>
-                    <button className="dim pointer" style={styles.button}>Submit</button>
+                    <button className="dim pointer" style={styles.button}>Share</button>
                 </div>
             </div>
     );

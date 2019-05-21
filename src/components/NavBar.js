@@ -41,15 +41,16 @@ const styles = {
     justifyContent: "flex-end"
   },
   logo: {
-      width: 200,
-      marginBottom: 10
+    width: 200,
+    marginBottom: 10
   }
 };
 
 class NavBar extends React.Component {
   state = {
     isLandingPage: false,
-    isSignedIn: false
+    isSignedIn: false,
+    isProfile: false
   };
 
   isLanding = () => {
@@ -58,8 +59,15 @@ class NavBar extends React.Component {
     }
   };
 
+  isProfile = () => {
+    if (window.location.pathname === "/profile") {
+      this.setState({ isProfile: true });
+    }
+  };
+
   componentDidMount() {
     this.isLanding();
+    this.isProfile();
   }
 
   render() {
@@ -67,7 +75,7 @@ class NavBar extends React.Component {
       <nav style={styles.nav}>
         <div style={styles.navLogoLinks}>
           <a href="/home">
-            <img 
+            <img
               style={styles.logo}
               alt="devconnect logo"
               src={
@@ -78,7 +86,7 @@ class NavBar extends React.Component {
             />
           </a>
         </div>
-        {window.location.pathname === "/profile" ? <SignedIn /> : <MainNav />}
+        {this.state.isProfile ? <SignedIn /> : <MainNav />}
       </nav>
     );
   }

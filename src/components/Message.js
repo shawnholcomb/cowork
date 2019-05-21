@@ -29,7 +29,8 @@ const styles = {
         borderRadius: '0 0 10px 10px'
     },
     h4: {
-        margin: 0
+        margin: 0,
+        fontWeight: 'normal'
     },
     profilePic: {
         borderRadius: '50%',
