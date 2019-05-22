@@ -32,7 +32,7 @@ const Profile = () => {
           {/* <DevMenu /> */}
           <BizMenu />
           <div>
-            <Wall />
+            <BizWall />
           </div>
         </div>
       </div>
