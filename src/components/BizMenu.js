@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const styles = {
   container: {
@@ -32,15 +33,17 @@ const styles = {
 
 const BizMenu = () => {
   return (
-    // <div className='tc dib br3 pa3 ma2 bw2 shadow-5' style={styles}>
-    <ul style={styles.list}>
-      <li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-check-square"></i>Post Job</li>
-      <a style={styles.a} href='/browsejobs'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Jobs</li></a>
-      <a style={styles.a} href='/browseprofiles'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Developers</li></a>        
-      <a style={styles.a} href='/comingsoon'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-book"></i>Developer Resources</li></a>
-      <a style={styles.a} href='/comingsoon'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-question"></i>Help</li></a>
-    </ul>
-    // </div>
+      <ul style={styles.list}>
+        <li className='grow pointer'>Post Job
+        <Link
+                        to= {{
+                            state: {isPostJob:true}
+                        }} ></Link>
+        </li>
+        <li className='grow pointer'>Browse Developers</li>
+        <li className='grow pointer'>Browse Jobs</li>
+        <li className='grow pointer'>Help</li>
+      </ul>
   );
 }
 

@@ -10,6 +10,8 @@ import BrowseProfiles from './pages/BrowseProfiles';
 import ComingSoon from './pages/ComingSoon';
 import BrowseJobs from './pages/BrowseJobs';
 import AuthModal from './components/AuthModal.js';
+import PostJob from './components/PostJob';
+
 const styles = {
   landingPage: {
     background: 'url("/images/landingpage-bg.jpg") center center',
@@ -49,6 +51,7 @@ class App extends React.Component {
             <Route exact path='/comingsoon' component={ComingSoon} />
           </Switch>
           <AuthModal />
+          <PostJob />
         </div>
       </Router>
     )
