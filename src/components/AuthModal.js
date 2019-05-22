@@ -3,6 +3,7 @@ import { Button, FormGroup, FormControl } from "react-bootstrap";
 import { withRouter } from "react-router";
 import SignUpForm from "./SignUpForm";
 import Modal from "./Modal";
+import SignInForm from './SignIn';
 
 const signInStyle = {
   margin: "20 auto",
@@ -36,70 +37,6 @@ const bttnStyle = {
 const createStyle = {
   textAlign: "center"
 };
-
-class SignInForm extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      email: "",
-      password: ""
-    };
-  }
-
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
-  }
-
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  };
-
-  handleSubmit = event => {
-    event.preventDefault();
-  };
-
-  render() {
-    return (
-      <div>
-        <h1 style={signInStyle}>Sign In</h1>
-        <hr style={lineStyle} />
-        <form onSubmit={this.handleSubmit} style={formStyle}>
-          <FormGroup controlId="email" bssize="large">
-            <FormControl
-              type="email"
-              value={this.state.email}
-              placeholder="Email"
-              onChange={this.handleChange}
-              style={inputStyle}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bssize="large">
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              placeholder="Password"
-              type="password"
-              style={inputStyle}
-            />
-          </FormGroup>
-          <Button
-            className="grow pointer"
-            block
-            bssize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-            style={bttnStyle}
-          >
-            Login
-          </Button>
-        </form>
-      </div>
-    );
-  }
-}
 
 class AuthModal extends React.Component {
   state = {

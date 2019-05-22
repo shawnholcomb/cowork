@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import ProfilePage from "../pages/ProfilePage";
+import axios from 'axios';
 
 const signInStyle = {
   margin: "20 auto",
@@ -53,7 +54,13 @@ class SignInForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-  };
+
+    axios.get(`/signin/${this.state.email}/${this.state.password}`).then(success => {
+      if(success.data) window.location.href="/profile";
+      else {}
+    });
+
+  }
 
   render() {
     return (

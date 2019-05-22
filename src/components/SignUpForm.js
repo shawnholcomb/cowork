@@ -45,6 +45,8 @@ class SignUpForm extends Component {
       super(props);
   
       this.state = {
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
         mode:null, //null developer or business,
@@ -68,15 +70,18 @@ class SignUpForm extends Component {
     handleSubmit = event => {
       event.preventDefault();
 
-      axios.get(`/signup/${this.state.email}`).then(response => console.log(response));
+      axios.get(`/signup/${this.state.firstName}/${this.state.lastName}/${this.state.email}/${this.state.rePassword}/${this.state.dropdown}`).then(response => {
+        if(response) window.location.href="/profile";
+        else alert("fail");
+      });
     }
   
    onChange = (event) => {
     switch(event.target.value) {
-      case "business":
+      case "Business":
         this.setState({dropdown: event.target.value});
         break;
-      case "developer":
+      case "Developer":
         this.setState({dropdown: event.target.value});
         break;
       default: 
@@ -146,8 +151,8 @@ class SignUpForm extends Component {
         />
     </FormGroup>
     <FormGroup><select onChange={this.onChange}>
-  <option value="developer">Developer</option>
-  <option value="business">Business</option>
+  <option value="Developer">Developer</option>
+  <option value="Business">Business</option>
   
 </select>
 </FormGroup>
