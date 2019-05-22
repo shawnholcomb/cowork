@@ -11,8 +11,29 @@ app.get('/ping', (req, res) => {
     return res.send('pong');
 })
 
-app.get('/signup/:email', (req, res) => {
-    console.dir(req.params.email);
+app.get('/signup/:firstName/:lastName/:email/:password/:type', (req, res) => {
+    helper.createAccount(req.params.firstName, req.params.lastName, req.params.email, req.params.password, req.params.type, response => {
+        if(response) res.send(true);
+        else res.send(false);
+    });
+})
+
+app.get('/signin/:email/:password', (req, res) => {
+    helper.authenticate(req.params.email, req.params.password, success => {
+        res.send(success);
+    })
+})
+
+app.get('/createjob/:title/:description/:compensation', (req, res) => {
+    helper.createJob(req.params.title, req.params.description, req.params.compensation, result => {
+        res.send(result);
+    })
+})
+
+app.get('/getjobs', (req, res) => {
+    helper.populateJobs(result => {
+        res.send(result);
+    })
 })
 
 app.listen(process.env.PORT || 8080, () => {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import { withRouter } from "react-router";
 import Modal from "./Modal"
+import axios from "axios";
 
 
 
@@ -42,8 +43,8 @@ class PostJob extends Component {
 
     this.state = {
       title: "",
-      pay: 0,
-      desription: "",
+      compensation: 0,
+      description: "",
 
 
     };
@@ -61,6 +62,14 @@ class PostJob extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
+    axios.get(`/createjob/${this.state.title}/${this.state.description}/${this.state.compensation}`).then(response => {
+      console.log(response);
+    })
+
+    axios.get('/getjobs').then(response => {
+      console.log(response.data);
+    });
   };
 
   render() {
@@ -81,20 +90,20 @@ class PostJob extends Component {
               style={inputStyle}
             />
           </FormGroup>
-          <FormGroup controlId="pay" bssize="large">
+          <FormGroup controlId="compensation" bssize="large">
             <FormControl
-              value={this.state.pay}
+              value={this.state.compensation}
               onChange={this.handleChange}
               placeholder="Salary"
               type="text"
               style={inputStyle}
             />
           </FormGroup>
-          <FormGroup controlId="desription" bssize="large">
+          <FormGroup controlId="description" bssize="large">
             <FormControl
-              value={this.state.desription}
+              value={this.state.description}
               onChange={this.handleChange}
-              placeholder="desription"
+              placeholder="description"
               type="textarea"
               style={inputStyle}
             />
