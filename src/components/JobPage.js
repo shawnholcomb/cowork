@@ -20,6 +20,10 @@ const styles = {
         fontSize: '1em',
         fontFamily: '"Heebo", sans-serif',
         borderRadius: 20,
+        marginRight: 20
+    },
+    buttonDiv: {
+        display: 'flex',
     }
 }
 
@@ -29,7 +33,11 @@ const JobPage = () => {
             <div>
                 <h1>Looking for landing page for new startup</h1>
                 <h3 style={styles.lightWeight}>New startup SmashApp has a mobile app in development but we are currently advertising for the state-of-the-art matchmaking app.  We need a developer to design a landing page for our website.  Looking for someone with high level design abilities to create a modern, colorful, breath-taking page to help encourage excitement!</h3>
-                <button style={styles.button}>Apply for this job</button>
+                <div style={styles.buttonDiv}>
+                    <button style={styles.button}>Apply for this job</button>
+                    <button style={styles.button}>Save this job</button>
+                </div>
+
             </div>
             <div>
                 <h3>Company: <span style={styles.lightWeight}>SmashApp, Inc.</span></h3>
