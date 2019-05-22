@@ -37,7 +37,6 @@ const JobPage = () => {
                     <button style={styles.button}>Apply for this job</button>
                     <button style={styles.button}>Save this job</button>
                 </div>
-
             </div>
             <div>
                 <h3>Company: <span style={styles.lightWeight}>SmashApp, Inc.</span></h3>

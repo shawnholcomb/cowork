@@ -29,12 +29,13 @@ const Profile = () => {
     <div style={styles.body}>
       <div style={styles.container}>
         <div style={styles.profContainer}>
-          <DevMenu />
+          <BizMenu />
           <div>
             <Wall />
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
