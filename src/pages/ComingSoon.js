@@ -15,6 +15,7 @@ const styles = {
     },
     profContainer: {
         maxWidth: '1200px',
+        height: '72vh',
         margin: '0 auto',
         background: '#fafafa',
         display: 'flex',

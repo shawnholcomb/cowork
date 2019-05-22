@@ -6,9 +6,7 @@ const styles = {
         maxWidth: 1200,
         margin: '0 auto',
         padding: '2em',
-        // borderBottom: '1px solid #777'
         background: '#fff',
-        borderRadius: '0 0 12px 12px'
     },
     hiwHeaderH1: {
         textAlign: 'center',

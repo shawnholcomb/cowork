@@ -49,8 +49,7 @@ const styles = {
 class NavBar extends React.Component {
   state = {
     isLandingPage: false,
-    isSignedIn: false,
-    isProfile: false
+    isSignedIn: false
   };
 
   isLanding = () => {
@@ -59,16 +58,9 @@ class NavBar extends React.Component {
     }
   };
 
-  isProfile = () => {
-    if (window.location.pathname === "/profile") {
-      this.setState({ isProfile: true });
-    }
-  };
-
   componentDidMount() {
     this.isLanding();
-    this.isProfile();
-  }
+  };
 
   render() {
     return (
@@ -86,7 +78,7 @@ class NavBar extends React.Component {
             />
           </a>
         </div>
-        {this.state.isProfile ? <SignedIn /> : <MainNav />}
+        {this.state.isSignedIn ? <SignedIn /> : <MainNav />}
       </nav>
     );
   }

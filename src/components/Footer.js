@@ -54,19 +54,19 @@ const Footer = () => {
                     <img style={styles.logo} alt="Company logo" src='/images/dclogo-gray.png'></img>
                 </div>
                 <div style={styles.flex}>
-                    <a href='/home' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Terms of Service</h4></a>
+                    <a href='#' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Terms of Service</h4></a>
                     <h4 style={styles.footerH4}>|</h4>
-                    <a href='/home' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Privacy Policy</h4></a>
+                    <a href='#' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Privacy Policy</h4></a>
                 </div>
                 <div>
                     <h5 style={styles.footerH4}>&copy; 2019 DevConnect</h5>
                 </div>
                 <div>
                     <div style={styles.socialMedia}>
-                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-facebook-square"></i></h1></a>
-                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-twitter-square"></i></h1></a>
-                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-linkedin"></i></h1></a>
-                        <a href='/home' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-instagram"></i></h1></a>
+                        <a href='#' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-facebook-square"></i></h1></a>
+                        <a href='#' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-twitter-square"></i></h1></a>
+                        <a href='#' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-linkedin"></i></h1></a>
+                        <a href='#' className='grow'style={styles.a}><h1 style={styles.footerH1}><i className="fab fa-instagram"></i></h1></a>
                     </div>
                 </div>
             </div>

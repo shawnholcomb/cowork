@@ -13,7 +13,6 @@ const styles = {
     composeDiv: {
         padding: '0.8em',
         borderBottom: '1px solid rgba(119,119,119,0.2)',
-        borderRadius: '10px 10px 0 0',
         background: '#fafafa'
     },
     compose: {
