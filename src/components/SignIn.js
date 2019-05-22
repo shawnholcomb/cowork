@@ -1,35 +1,35 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
-import ProfilePage from "../pages/ProfilePage";
 
-const signInStyle = {
-  margin: "20 auto",
-  textAlign: "center"
-};
-const lineStyle = {
-  width: "320px",
-  textAlign: "center",
-  marginTop: "20px",
+const styles = {
+  signInStyle: {
+    margin: 20,
+    textAlign: "center"
+  },
+  lineStyle: {
+    width: 320,
+    textAlign: "center",
+    marginTop: 20,
+    backgroundColor: "#0075e3"
+  },
+  formStyle: {
+    margin: "0 auto",
+    marginTop: 40
+  },
+  inputStyle: {
+    fontSize: 20,
+    width: '100%',
+    height: 40,
+    marginBottom: 20,
+    textAlign: "left"
+  },
+  bttnStyle: {
+    height: 30,
+    width: 60,
+    fontSize: 15
+  }
+}
 
-  backgroundColor: "#0075e3"
-};
-const formStyle = {
-  margin: "0 auto",
-  textAlign: "center",
-  marginTop: "40px"
-};
-const inputStyle = {
-  fontSize: "20px",
-  width: "250px",
-  height: "40px",
-  marginBottom: "20px",
-  textAlign: "center"
-};
-const bttnStyle = {
-  height: "30px",
-  width: "60px",
-  fontSize: "15px"
-};
 
 class SignInForm extends Component {
   constructor(props) {
@@ -53,21 +53,22 @@ class SignInForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log('test')
   };
 
   render() {
     return (
       <div>
-        <h1 style={signInStyle}>Sign In</h1>
-        <hr style={lineStyle} />
-        <form onSubmit={this.handleSubmit} style={formStyle}>
+        <h1 style={styles.signInStyle}>Sign In</h1>
+        <hr style={styles.lineStyle} />
+        <form onSubmit={this.handleSubmit} style={styles.formStyle}>
           <FormGroup controlId="email" bssize="large">
             <FormControl
               type="email"
               value={this.state.email}
               placeholder="Email"
               onChange={this.handleChange}
-              style={inputStyle}
+              style={styles.inputStyle}
             />
           </FormGroup>
           <FormGroup controlId="password" bssize="large">
@@ -76,7 +77,7 @@ class SignInForm extends Component {
               onChange={this.handleChange}
               placeholder="Password"
               type="password"
-              style={inputStyle}
+              style={styles.inputStyle}
             />
           </FormGroup>
           <Button
@@ -84,9 +85,9 @@ class SignInForm extends Component {
             bssize="large"
             disabled={!this.validateForm()}
             type="submit"
-            style={bttnStyle}
+            style={styles.bttnStyle}
           >
-            Login
+            Sign In
           </Button>
         </form>
       </div>
