@@ -31,30 +31,18 @@ const styles = {
     }
 }
 
-const JobLi = () => {
+const JobLi = (props) => {
     return (
-        <div>
         <li className='grow pointer' style={styles.container}>
             <div style={styles.flex}>
-                <h4 style={styles.h4}>Looking for landing page for new startup</h4>
-                <h4 style={styles.h4}>Compensation: $300</h4>
+                <h4 style={styles.h4}>{props.title}</h4>
+                <h4 style={styles.h4}>Compensation: ${props.compensation}</h4>
             </div>
             <div>
-                <h5 style={styles.lightWeight}>New startup SmashApp has a mobile app in development but we are currently advertising for the state-of-the-art matchmaking app.  We need a developer to design a landing page for our website.  Looking for someone with high level design abilities to create a modern, colorful, breath-taking page to help encourage excitement!</h5>
+                <h5 style={styles.lightWeight}>{props.description}</h5>
                 <h5 style={styles.underline}>Click to learn more</h5>
             </div>
         </li>
-        <li className='grow pointer' style={styles.container}>
-            <div style={styles.flex}>
-                <h4 style={styles.h4}>Looking for landing page for new startup</h4>
-                <h4 style={styles.h4}>Compensation: $300</h4>
-            </div>
-            <div>
-                <h5 style={styles.lightWeight}>New startup SmashApp has a mobile app in development but we are currently advertising for the state-of-the-art matchmaking app.  We need a developer to design a landing page for our website.  Looking for someone with high level design abilities to create a modern, colorful, breath-taking page to help encourage excitement!</h5>
-                <h5 style={styles.underline}>Click to learn more</h5>
-            </div>
-        </li>
-        </div>
     )
 }
 

@@ -4,6 +4,7 @@ import DevMenu from '../components/DevMenu.js';
 import BizMenu from '../components/BizMenu.js';
 import Ul from '../components/Ul.js';
 import JobLi from '../components/JobLi.js';
+import axios from 'axios';
 
 const styles = {
     header: {
@@ -28,26 +29,45 @@ const styles = {
     }
 };
 
-const BrowseJobs = () => {
-    return (
-        <div>
-            <div style={styles.container}>
-                <div style={styles.profContainer}>
-                    <DevMenu />
-                    <div>
-                        <div style={styles.header}>
-                            <h1>Browse Jobs</h1>
-                            <h3 style={styles.lightWeight}>Browse current available jobs.  Click on any job to view more details.</h3>
+class BrowseJobs extends React.Component {
+    state = {
+        jobs: []
+    }
+
+    componentDidMount() {
+        axios.get('/getjobs').then(response => { 
+            const jobs = response.data
+            this.setState({ jobs })
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <div style={styles.container}>
+                    <div style={styles.profContainer}>
+                        <DevMenu />
+                        <div>
+                            <div style={styles.header}>
+                                <h1>Browse Jobs</h1>
+                                <h3 style={styles.lightWeight}>Browse current available jobs.  Click on any job to view more details.</h3>
+                            </div>
+                            <Ul>
+                                {this.state.jobs.map(value => (
+                                    <JobLi
+                                        title={value.title}
+                                        description={value.body}
+                                        compensation={value.compensation}
+                                    />)
+                                )}
+                            </Ul>
                         </div>
-                        <Ul>
-                            <JobLi />
-                        </Ul>
                     </div>
                 </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
-    );
+        );
+    };
 }
 
 export default BrowseJobs;
