@@ -34,11 +34,11 @@ const styles = {
 const BizMenu = () => {
   return (
     <ul style={styles.list}>
-      <Link
+      <Link style={styles.a}
         to={{
           state: { isPostJob: true }
         }} ><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-check-square"></i>Post Job</li></Link>
-      <a style={styles.a} href='/browsejobs'><li className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Jobs</li></a>
+      <a style={styles.a} href='/browsejobs'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Jobs</li></a>
       <a style={styles.a} href='/browseprofiles'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Developers</li></a>
       <a style={styles.a} href='/comingsoon'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-book"></i>Developer Resources</li></a>
       <a style={styles.a} href='/comingsoon'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-question"></i>Help</li></a>
