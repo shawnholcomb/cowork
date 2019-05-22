@@ -1,39 +1,39 @@
 import React from 'react';
-// import NavBar from '../components/NavBar.js';
 import Footer from '../components/Footer.js';
-// import BizMenu from '../components/BizMenu.js';
 import DevMenu from '../components/DevMenu.js';
-import Wall from '../components/Wall.js';
 import BizMenu from '../components/BizMenu.js';
+import Wall from '../components/Wall.js';
+import BizWall from '../components/BizWall.js';
+
 
 const styles = {
+  body: {
+    background: '#fafafa',
+  },
   container: {
-    background: '#f5f5f5',
+    maxWidth: 1200,
+    margin: '0 auto'
   },
   profContainer: {
     maxWidth: '1200px',
     margin: '0 auto',
-    background: '#f5f5f5',
+    background: '#fafafa',
+    fontFamily: '"Heebo", sans-serif',
     display: 'flex',
-    flexFlow: 'row'
+    flexFlow: 'row',
   }
 };
 
 const Profile = () => {
   return (
-    <div>
-      <div>
-        {/* <NavBar /> */}
-        <div style={styles.container}>
-          <div style={styles.profContainer}>
-            <DevMenu />
-              <div>
-                <Wall />
-                
-              </div>
+    <div style={styles.body}>
+      <div style={styles.container}>
+        <div style={styles.profContainer}>
+          <DevMenu />
+          <div>
+            <Wall />
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );

@@ -1,24 +1,23 @@
 import React from 'react';
-import ReceivedMessages from './ReceivedMessages';
-import SentMessages from './SentMessages';
+import MessageBoard from './MessageBoard';
+import ComposeMessage from './ComposeMessage';
 
 const styles = {
   container: {
-    border: '1px solid grey',
-    width: 700,
-    height: 500,
-    display: 'flex',
-    background: 'white',
-    justifyContent: 'flex-start',
-    flexFlow: 'row wrap',
+    width: 960,
+    height: '75vh',
+    position: 'relative',
+    padding: '1em 0 0 0',
+    overflow: 'hidden',
+    background: '#fafafa'
   }
 }
 
 const Wall = () => {
   return (
-    <div className='br2 pa3 ma2 bw2 shadow-5' style={styles.container}>
-      <ReceivedMessages />
-      <SentMessages />
+    <div style={styles.container}>
+      <MessageBoard />
+      <ComposeMessage />
     </div>
   );
 }

@@ -5,7 +5,8 @@ import FeaturedProfile from './FeaturedProfile';
 const styles = {
     container: {
         maxWidth: 1200,
-        margin: '0 auto'
+        margin: '0 auto',
+        padding: '0 20px'
     },
     featureDiv: {
         minHeight: 500,
@@ -17,11 +18,12 @@ const styles = {
     h1: {
         color: '#fff',
         marginBottom: '1em',
-        fontSize: '2em'
+        fontSize: '2em',
+        fontFamily: '"Heebo", sans-serif'
     }
 }
 
-function FeaturedDev() {
+const FeaturedDev = () => {
     return (
         <div style={styles.featureDiv}>
             <div style={styles.container}>

@@ -10,16 +10,29 @@ const styles = {
     flexFlow: 'column nowrap',
   },
   list: {
+    color: '#0070dd',
+    fontWeight: 'bold',
     display: 'flex',
     flexFlow: 'column wrap',
     listStyleType: 'none',
     justifyContent: 'flex-start',
+    lineHeight: 1.5,
+    padding: '0 20px'
+  },
+  li: {
+    margin: '0.3em'
+  },
+  icon: {
+    marginRight: 5
+  },
+  a: {
+    textDecoration: 'none',
+    color: '#0070dd'
   }
 }
 
 const BizMenu = () => {
   return (
-    // <div className='tc dib br3 pa3 ma2 bw2 shadow-5' style={styles}>
       <ul style={styles.list}>
         <li className='grow pointer'>Post Job
         <Link
@@ -31,7 +44,6 @@ const BizMenu = () => {
         <li className='grow pointer'>Browse Jobs</li>
         <li className='grow pointer'>Help</li>
       </ul>
-    // </div>
   );
 }
 
