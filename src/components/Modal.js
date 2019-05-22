@@ -5,7 +5,7 @@ const styles = {
   wrapperStyle: {
     backgroundColor: "#fff",
     border: "1px solid rgba(0,0,0,0.25)",
-    boxShadow: '0 0 0 1000px rgba(0,0,0,0.66)',
+    boxShadow: '0 0 0 5000px rgba(0,0,0,0.66)',
     width: 400,
     minHeight: 400,
     margin: "0 auto",

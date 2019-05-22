@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
-import ProfilePage from "../pages/ProfilePage";
 import axios from 'axios';
 
 const styles = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer.js';
 import DevMenu from '../components/DevMenu.js';
-import BizMenu from '../components/BizMenu.js';
+// import BizMenu from '../components/BizMenu.js';
 import Ul from '../components/Ul.js';
 import DevLi from '../components/DevLi.js';
 
