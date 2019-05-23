@@ -17,10 +17,10 @@ const styles = {
     fontFamily: '"Heebo", sans-serif',
   },
   exitBtnStyle: {
-    color: "grey",
+    color: "white",
     float: "right",
     margin: 10,
-    fontSize: '1.3em'
+    fontSize: '1.3 em'
   }
 };
 
@@ -29,7 +29,7 @@ class Modal extends React.Component {
     return this.props.isopen ? (
       <div className="Login" style={styles.wrapperStyle}>
         <Link to={{}} style={styles.exitBtnStyle}>
-          <i class="far fa-times-circle" />
+          <i class="fas fa-times" />
         </Link>
         {this.props.children}
       </div>

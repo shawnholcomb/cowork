@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import ProfilePage from "../pages/ProfilePage";
-import axios from 'axios';
+import axios from "axios";
 
 const styles = {
   signInStyle: {
-    margin: 20,
-    textAlign: "center"
+    padding: 10,
+    paddingLeft: 51,
+    margin: 0,
+    textAlign: "center",
+    backgroundColor: "#0075e3",
+    borderTopLeftRadius: "7px",
+    borderTopRightRadius: "7px",
+    color: "white"
   },
   lineStyle: {
-    width: 320,
+    width: "99%",
     textAlign: "center",
-    marginTop: 20,
+    marginTop: 0,
     backgroundColor: "#0075e3"
   },
   formStyle: {
@@ -20,18 +26,26 @@ const styles = {
   },
   inputStyle: {
     fontSize: 20,
-    width: '100%',
+    width: "85%",
     height: 40,
-    marginBottom: 20,
-    textAlign: "left"
+    margin: "10px 30px",
+    textAlign: "left",
+    paddingLeft: 15,
+    backgroundColor: "#e8e8e8",
+    border: 0,
+    borderRadius: "5px"
   },
   bttnStyle: {
-    height: 30,
-    width: 60,
-    fontSize: 15
+    height: 40,
+    width: "85%",
+    fontSize: 20,
+    margin: "10px 30px",
+    backgroundColor: "#0070dd",
+    color: "white",
+    borderRadius: "5px",
+    border: 0
   }
-}
-
+};
 
 class SignInForm extends Component {
   constructor(props) {
@@ -56,12 +70,14 @@ class SignInForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.get(`/signin/${this.state.email}/${this.state.password}`).then(success => {
-      if(success.data) window.location.href="/profile";
-      else {}
-    });
-
-  }
+    axios
+      .get(`/signin/${this.state.email}/${this.state.password}`)
+      .then(success => {
+        if (success.data) window.location.href = "/profile";
+        else {
+        }
+      });
+  };
 
   render() {
     return (
@@ -93,6 +109,7 @@ class SignInForm extends Component {
             disabled={!this.validateForm()}
             type="submit"
             style={styles.bttnStyle}
+            className="grow pointer"
           >
             Sign In
           </Button>
