@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import { withRouter } from "react-router";
-import Modal from "./Modal"
+import Modal from "./Modal";
 import axios from "axios";
 
-
-
-
 const signInStyle = {
-  margin: "20 auto",
-  textAlign: "center"
+  padding: 10,
+  paddingLeft: 51,
+  margin: 0,
+  textAlign: "center",
+  backgroundColor: "#0075e3",
+  borderTopLeftRadius: "7px",
+  borderTopRightRadius: "7px",
+  color: "white"
 };
 const lineStyle = {
-  width: "320px",
+  width: "99%",
   textAlign: "center",
-  marginTop: "20px",
-
+  marginTop: 0,
   backgroundColor: "#0075e3"
 };
 const formStyle = {
@@ -24,18 +26,37 @@ const formStyle = {
   marginTop: "40px"
 };
 const inputStyle = {
-  fontSize: "20px",
-  width: "250px",
-  height: "40px",
-  marginBottom: "20px",
-  textAlign: "center"
+  fontSize: 20,
+  width: "85%",
+  height: 40,
+  margin: "10px 30px",
+  textAlign: "left",
+  paddingLeft: 15,
+  backgroundColor: "#e8e8e8",
+  border: 0,
+  borderRadius: "5px"
+};
+const descriptionStyle = {
+  fontSize: 20,
+  width: "85%",
+  margin: "10px 30px",
+  textAlign: "left",
+  paddingLeft: 15,
+  paddingRight: 15,
+  backgroundColor: "#e8e8e8",
+  border: 0,
+  borderRadius: "5px"
 };
 const bttnStyle = {
-  height: "30px",
-  width: "60px",
-  fontSize: "15px"
+  height: 40,
+  width: "85%",
+  fontSize: 20,
+  margin: "10px 30px 50px",
+  backgroundColor: "#0070dd",
+  color: "white",
+  borderRadius: "5px",
+  border: 0
 };
-
 
 class PostJob extends Component {
   constructor(props) {
@@ -44,15 +65,11 @@ class PostJob extends Component {
     this.state = {
       title: "",
       compensation: 0,
-      description: "",
-
-
+      description: ""
     };
   }
 
-  validateForm() {
-   
-  }
+  validateForm() {}
 
   handleChange = event => {
     this.setState({
@@ -63,21 +80,28 @@ class PostJob extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.get(`/createjob/${this.state.title}/${this.state.description}/${this.state.compensation}`).then(response => {
-      console.log(response);
-    })
+    axios
+      .get(
+        `/createjob/${this.state.title}/${this.state.description}/${
+          this.state.compensation
+        }`
+      )
+      .then(response => {
+        console.log(response);
+      });
 
-    axios.get('/getjobs').then(response => {
+    axios.get("/getjobs").then(response => {
       console.log(response.data);
     });
   };
 
   render() {
     return (
-      <Modal isopen={
-        this.props.location.state &&
-        this.props.location.state.isPostJob
-      }>
+      <Modal
+        isopen={
+          this.props.location.state && this.props.location.state.isPostJob
+        }
+      >
         <h1 style={signInStyle}>Post Job</h1>
         <hr style={lineStyle} />
         <form onSubmit={this.handleSubmit} style={formStyle}>
@@ -92,37 +116,43 @@ class PostJob extends Component {
           </FormGroup>
           <FormGroup controlId="compensation" bssize="large">
             <FormControl
-              value={this.state.compensation}
+              value={
+                this.state.compensation === 0
+                  ? "Compensation"
+                  : this.state.compensation
+              }
               onChange={this.handleChange}
-              placeholder="Salary"
-              type="text"
+              placeholder={
+                this.state.compensation === 0 ? "Compensation" : null
+              }
+              type="number"
               style={inputStyle}
             />
           </FormGroup>
           <FormGroup controlId="description" bssize="large">
             <FormControl
+              as="textarea"
+              rows="6"
               value={this.state.description}
               onChange={this.handleChange}
-              placeholder="description"
-              type="textarea"
-              style={inputStyle}
+              placeholder="Please enter a description about the job"
+              type="text"
+              style={descriptionStyle}
             />
           </FormGroup>
           <Button
-            className="grow pointer"
             block
             bssize="large"
             type="Post "
             style={bttnStyle}
+            className="grow pointer"
           >
-            Login
+            Post Job
           </Button>
         </form>
       </Modal>
     );
   }
 }
-
-
 
 export default withRouter(PostJob);
