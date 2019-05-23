@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const styles = {
   container: {
@@ -33,8 +34,12 @@ const styles = {
 const DevMenu = () => {
   return (
     <ul style={styles.list}>
-      <li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-check-square"></i>My Jobs</li>
-      <li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-plus-square"></i>Saved Jobs</li>
+      <a style={styles.a} href='/currentjobs'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-check-square"></i>My Jobs</li></a>
+      <a style={styles.a} href='/savedjobs'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-plus-square"></i>Saved Jobs</li></a>
+      <Link style={styles.a}
+        to={{
+          state: { isPostJob: true }
+        }} ><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-plus-square"></i>Post Job</li></Link>
       <a style={styles.a} href='/browsejobs'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Jobs</li></a>
       <a style={styles.a} href='/browseprofiles'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Developers</li></a>        
       <a style={styles.a} href='/comingsoon'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-book"></i>Developer Resources</li></a>

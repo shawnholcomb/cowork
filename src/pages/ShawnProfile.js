@@ -1,9 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer.js';
 import DevMenu from '../components/DevMenu.js';
-import BizMenu from '../components/BizMenu.js';
-import Wall from '../components/Wall.js';
-import BizWall from '../components/BizWall.js';
+import DevProfile from '../components/DevProfile.js';
 
 
 const styles = {
@@ -24,14 +22,14 @@ const styles = {
   }
 };
 
-const Profile = () => {
+const ShawnProfile = () => {
   return (
     <div style={styles.body}>
       <div style={styles.container}>
         <div style={styles.profContainer}>
           <DevMenu />
           <div>
-            <Wall />
+            <DevProfile />
           </div>
         </div>
       </div>
@@ -40,4 +38,4 @@ const Profile = () => {
   );
 }
 
-export default Profile;
+export default ShawnProfile;

@@ -57,7 +57,7 @@ const ComposeMessage = () => {
                     <h4 style={styles.compose}>Compose Message</h4>
                 </div>
                 <div style={styles.inputDiv}>
-                    <img style={styles.profilePic} src="/images/defaultProfilePic.png" alt="current profile pic"></img>
+                    <img style={styles.profilePic} src="/images/shawnProfilePic.jpg" alt="current profile pic"></img>
                     <input style={styles.input} type='text' placeholder="Enter your message here"></input>
                     <button className="dim pointer" style={styles.button}>Share</button>
                 </div>
