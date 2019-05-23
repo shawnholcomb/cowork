@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
-import ProfilePage from "../pages/ProfilePage";
 import axios from "axios";
 
 const styles = {
@@ -13,12 +12,6 @@ const styles = {
     borderTopLeftRadius: "7px",
     borderTopRightRadius: "7px",
     color: "white"
-  },
-  lineStyle: {
-    width: "99%",
-    textAlign: "center",
-    marginTop: 0,
-    backgroundColor: "#0075e3"
   },
   formStyle: {
     margin: "0 auto",
@@ -83,7 +76,6 @@ class SignInForm extends Component {
     return (
       <div>
         <h1 style={styles.signInStyle}>Sign In</h1>
-        <hr style={styles.lineStyle} />
         <form onSubmit={this.handleSubmit} style={styles.formStyle}>
           <FormGroup controlId="email" bssize="large">
             <FormControl

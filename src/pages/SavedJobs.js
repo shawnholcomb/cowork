@@ -27,7 +27,7 @@ const styles = {
         fontWeight: 'normal'
     },
     wrapper: {
-        height: '73vh'
+        height: '72vh'
     }
 };
 

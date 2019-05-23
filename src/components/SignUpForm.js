@@ -12,12 +12,6 @@ const signInStyle = {
   borderTopRightRadius: "7px",
   color: "white"
 };
-const lineStyle = {
-  width: "99%",
-  textAlign: "center",
-  marginTop: 0,
-  backgroundColor: "#0075e3"
-};
 const formStyle = {
   margin: "0 auto",
   textAlign: "center",
@@ -120,7 +114,6 @@ class SignUpForm extends Component {
     return (
       <div>
         <h1 style={signInStyle}>Sign Up</h1>
-        <hr style={lineStyle} />
         <form onSubmit={this.handleSubmit} style={formStyle}>
           <FormGroup controlId="firstName" bssize="large">
             <FormControl

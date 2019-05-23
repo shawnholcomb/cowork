@@ -1,10 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer.js';
 import DevMenu from '../components/DevMenu.js';
-import BizMenu from '../components/BizMenu.js';
 import Wall from '../components/Wall.js';
-import BizWall from '../components/BizWall.js';
-
 
 const styles = {
   body: {

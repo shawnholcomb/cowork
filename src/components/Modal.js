@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const styles = {
   wrapperStyle: {
     backgroundColor: "#fff",
-    border: "1px solid rgba(0,0,0,0.25)",
     boxShadow: '0 0 0 5000px rgba(0,0,0,0.66)',
     width: 400,
     minHeight: 400,
@@ -29,7 +28,7 @@ class Modal extends React.Component {
     return this.props.isopen ? (
       <div className="Login" style={styles.wrapperStyle}>
         <Link to={{}} style={styles.exitBtnStyle}>
-          <i class="fas fa-times" />
+          <i className="fas fa-times dim pointer" />
         </Link>
         {this.props.children}
       </div>

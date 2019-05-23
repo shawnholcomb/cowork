@@ -3,7 +3,7 @@ import React from 'react';
 const styles = {
     ul: {
         width: '100%',
-        minHeight: '65vh',
+        minHeight: '60vh',
     }
 }
 const Ul = (props) => {
