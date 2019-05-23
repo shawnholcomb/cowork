@@ -1,5 +1,6 @@
 import React from "react";
 import Dropdown from './Dropdown';
+import { Link } from 'react-router-dom';
 
 const styles = {
   nav: {
@@ -56,10 +57,10 @@ const SignedIn = () => {
     <div style={styles.navLogoLinks}>
       <ul style={styles.navList}>
         <li style={styles.navListLi}>
-          <a href="/profile" style={styles.a}>
+          <Link to="/profile/shawnh" style={styles.a}>
             <h4 style={styles.h4} className="underline-hover pointer">Shawn H.</h4>
             <Dropdown />
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -37,7 +37,7 @@ const BizMenu = () => {
       <Link style={styles.a}
         to={{
           state: { isPostJob: true }
-        }} ><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-check-square"></i>Post Job</li></Link>
+        }} ><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-plus-square"></i>Post Job</li></Link>
       <a style={styles.a} href='/browsejobs'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Jobs</li></a>
       <a style={styles.a} href='/browseprofiles'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-search"></i>Browse Developers</li></a>
       <a style={styles.a} href='/comingsoon'><li style={styles.li} className='grow pointer'><i style={styles.icon} className="fas fa-book"></i>Developer Resources</li></a>

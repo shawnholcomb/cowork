@@ -67,7 +67,7 @@ class Dropdown extends React.Component {
     render() {
         return (
             <div style={styles.dropdown} onMouseOver={this.showDropdownMenu} onMouseLeave={this.hideDropdownMenu}>
-                <img style={styles.profilePic} className="pointer" src="/images/defaultProfilePic.png" alt="profile" />
+                <img style={styles.profilePic} className="pointer" src="/images/shawnProfilePic.jpg" alt="profile" />
                 {this.state.displayMenu ? (
                     <ul style={styles.ul}>
                         <li className="underline-hover" style={styles.li}><Link to="/profile" style={styles.a}>Edit Profile</Link></li>

@@ -11,6 +11,13 @@ import ComingSoon from './pages/ComingSoon';
 import BrowseJobs from './pages/BrowseJobs';
 import AuthModal from './components/AuthModal.js';
 import PostJob from './components/PostJob';
+import Terms from './pages/Terms';
+import ShawnProfile from './pages/ShawnProfile';
+import MyJobs from './pages/MyJobs';
+import SavedJobs from './pages/SavedJobs';
+
+
+
 
 const styles = {
   landingPage: {
@@ -49,6 +56,10 @@ class App extends React.Component {
             <Route exact path='/browsejobs' component={BrowseJobs} />
             <Route exact path='/browseprofiles' component={BrowseProfiles} />
             <Route exact path='/comingsoon' component={ComingSoon} />
+            <Route exact path='/terms' component={Terms} />
+            <Route exact path='/profile/shawnh' component={ShawnProfile} />
+            <Route exact path='/currentjobs' component={MyJobs} />
+            <Route exact path='/savedjobs' component={SavedJobs} />
           </Switch>
           <AuthModal />
           <PostJob />
