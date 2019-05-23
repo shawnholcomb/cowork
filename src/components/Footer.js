@@ -54,7 +54,7 @@ const Footer = () => {
                     <img style={styles.logo} alt="Company logo" src='/images/dclogo-gray.png'></img>
                 </div>
                 <div style={styles.flex}>
-                    <a href='/terms' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Terms of Service</h4></a>
+                    <a href='/home' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Terms of Service</h4></a>
                     <h4 style={styles.footerH4}>|</h4>
                     <a href='/home' style={styles.a}><h4 className="underline-hover" style={styles.footerH4}>Privacy Policy</h4></a>
                 </div>

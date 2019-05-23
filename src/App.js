@@ -15,8 +15,12 @@ import Terms from './pages/Terms';
 import ShawnProfile from './pages/ShawnProfile';
 import MyJobs from './pages/MyJobs';
 import SavedJobs from './pages/SavedJobs';
-
-
+import Dev1 from './pages/Dev1';
+import Dev2 from './pages/Dev2';
+import Dev3 from './pages/Dev3';
+import Dev4 from './pages/Dev4';
+import Dev5 from './pages/Dev5';
+import Job1 from './pages/Job1';
 
 
 const styles = {
@@ -60,6 +64,12 @@ class App extends React.Component {
             <Route exact path='/profile/shawnh' component={ShawnProfile} />
             <Route exact path='/currentjobs' component={MyJobs} />
             <Route exact path='/savedjobs' component={SavedJobs} />
+            <Route exact path='/profile/dev1' component={Dev1} />
+            <Route exact path='/profile/dev2' component={Dev2} />
+            <Route exact path='/profile/dev3' component={Dev3} />
+            <Route exact path='/profile/dev4' component={Dev4} />
+            <Route exact path='/profile/dev5' component={Dev5} />
+            <Route exact path='/joblink' component={Job1} />
           </Switch>
           <AuthModal />
           <PostJob />

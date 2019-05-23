@@ -50,9 +50,7 @@ class NavBar extends React.Component {
   state = {
     isLandingPage: false,
     isSignedIn: false,
-    isProfile: false,
-    isUserProfile: false
-
+    isProfile: true,
   };
 
   isLanding = () => {
@@ -62,21 +60,21 @@ class NavBar extends React.Component {
   };
 
   isProfile = () => {
-    if (window.location.pathname === "/profile") {
-      this.setState({ isProfile: true });
-    }
-  };
-
-  isUserProfile = () => {
-    if (window.location.pathname === "/profile/shawnh") {
-      this.setState({ isProfile: true });
+    switch (window.location.pathname) {
+      case '/':
+        this.setState({ isProfile: false })
+        break;
+      case '/home':
+        this.setState({ isProfile: false })
+        break;
+      default:
+        this.setState({ isProfile: true })
     }
   };
 
   componentDidMount() {
     this.isLanding();
     this.isProfile();
-    this.isUserProfile();
   };
 
   render() {

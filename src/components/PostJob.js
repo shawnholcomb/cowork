@@ -36,8 +36,7 @@ const descriptionStyle = {
   width: "85%",
   margin: "10px 30px",
   textAlign: "left",
-  paddingLeft: 15,
-  paddingRight: 15,
+  padding: 10,
   backgroundColor: "#e8e8e8",
   border: 0,
   borderRadius: "5px"

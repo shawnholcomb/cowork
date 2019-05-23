@@ -52,14 +52,14 @@ const styles = {
     }
 }
 
-const DevProfile = () => {
+const DevProfile4 = () => {
     return (
         <div style={styles.bg}>
             <div style={styles.container}>
                 <div style={styles.imageDiv}>
-                    <img style={styles.headshot} src='/images/shawnProfilePic.jpg' alt="Shawn headshot"></img>
-                    <h2 style={styles.lightWeight}>Shawn H.</h2>
-                    <h3 style={styles.lightWeight}>Lewisville, TX</h3>
+                    <img style={styles.headshot} src='/images/testDevHeadshot4.jpg' alt="Shawn headshot"></img>
+                    <h2 style={styles.lightWeight}>Susan F.</h2>
+                    <h3 style={styles.lightWeight}>Irving, TX</h3>
                     <div style={styles.icons}>
                         <i className="far fa-envelope grow pointer"></i>
                         <i className="fas fa-phone grow pointer"></i>
@@ -70,13 +70,13 @@ const DevProfile = () => {
                     <button className="grow pointer" style={styles.button}>Hire Me</button>
                 </div>
                 <div style={styles.detailsDiv}>
-                    <h2 style={styles.lightWeight}>My name is Shawn and I am a web developer in DFW.</h2>
+                    <h2 style={styles.lightWeight}>My name is Susan and I am a webdeveloper in DFW.</h2>
                     <h3 style={styles.lightWeight}>I recently graduated from a web development bootcamp at SMU and am excited to get working in the field.  You can check out my work by following the links to my GitHub or LinkedIn profiles on the left.  I hope to hear from you soon, I would love to see what we can build together!</h3>
-                    <h3 style={styles.lightWeight}>Skills: HTML, CSS , Javascript, Node, React, MySql, MongoDB, Express, React, Photoshop</h3>
+                    <h3 style={styles.lightWeight}>Skills: HTML, CSS , Javascript</h3>
                 </div>
             </div>
         </div>
     )
 }
 
-export default DevProfile;
+export default DevProfile4;

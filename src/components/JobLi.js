@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const styles = {
     container: {
@@ -15,34 +16,47 @@ const styles = {
     },
     lightWeight: {
         fontWeight: 'normal',
-        lineHeight: '150%'
+        lineHeight: '150%',
+        color: '#000'
     },
     flex: {
         display: 'flex',
         justifyContent: 'space-between'
     },
     h4: {
-        marginBottom: 0
+        marginBottom: 0,
+        color: '#000'
+    },
+    h4title: {
+        marginBottom: 0,
+        color: '#0070dd',
+        fontWeight: 'bolder'
     },
     underline: {
         fontWeight: 'normal',
         lineHeight: '150%',
-        textDecoration: 'underline'
+        textDecoration: 'underline',
+        color: '#333'
+    },
+    a: {
+        textDecoration: 'none'
     }
 }
 
 const JobLi = (props) => {
     return (
-        <li className='grow pointer' style={styles.container}>
-            <div style={styles.flex}>
-                <h4 style={styles.h4}>{props.title}</h4>
-                <h4 style={styles.h4}>Compensation: ${props.compensation}</h4>
-            </div>
-            <div>
-                <h5 style={styles.lightWeight}>{props.description}</h5>
-                <h5 style={styles.underline}>Click to learn more</h5>
-            </div>
-        </li>
+        <a href="/joblink" style={styles.a}>
+            <li className='grow pointer' style={styles.container}>
+                <div style={styles.flex}>
+                    <h4 style={styles.h4title}>{props.title}</h4>
+                    <h4 style={styles.h4}>Compensation: ${props.compensation}</h4>
+                </div>
+                <div>
+                    <h4 style={styles.lightWeight}>{props.description}</h4>
+                    <h5 style={styles.underline}>Click to learn more</h5>
+                </div>
+            </li>
+        </a>
     )
 }
 
