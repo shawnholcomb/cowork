@@ -2,7 +2,6 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://devconnecttx.herokuapp.com:8080",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
