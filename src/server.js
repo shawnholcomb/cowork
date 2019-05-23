@@ -8,6 +8,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 require('./controller/connection');
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+  
 app.get('/ping', (req, res) => {
     return res.send('pong');
 })
