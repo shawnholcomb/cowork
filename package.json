@@ -2,7 +2,7 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://wxd8rismec7gsung:renhysmqcak1mpon@lg7j30weuqckmw07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/lk38ljtm49ipaho9",
+  "proxy": "https://wxd8rismec7gsung:renhysmqcak1mpon@lg7j30weuqckmw07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
