@@ -16,4 +16,4 @@ DevConnect is a web application created to help DFW-based companies find web dev
 React, CSS, Javascript, Node, Express, Firebase, Axios package(for API access), Heroku
 
 ## Deployed Site
-tbd
+https://devconnecttx.herokuapp.com/
