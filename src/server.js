@@ -10,6 +10,7 @@ require('./controller/connection');
 
 app.get('/ping', (req, res) => {
     return res.send('pong');
+
 })
 
 app.get('/signup/:firstName/:lastName/:email/:password/:type', (req, res) => {
