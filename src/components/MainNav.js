@@ -45,7 +45,8 @@ const styles = {
 
 class MainNav extends React.Component {
   state = {
-    isLandingPage: false
+    isLandingPage: false,
+    isProfile: this.props.isProfile
   }
 
   isLanding = () => {
