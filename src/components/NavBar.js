@@ -67,6 +67,9 @@ class NavBar extends React.Component {
       case '/home':
         this.setState({ isProfile: false })
         break;
+      case '/works':
+        this.setState({ isProfile: false })
+        break;
       default:
         this.setState({ isProfile: true })
     }
