@@ -7,7 +7,7 @@ const styles = {
         height: 650,
         position: 'relative',
         overflowY: 'scroll',
-        paddingBottom: 60
+        paddingBottom: 120
     }
 }
 
