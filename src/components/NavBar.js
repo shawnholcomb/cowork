@@ -42,7 +42,7 @@ const styles = {
   },
   logo: {
     width: 200,
-    marginBottom: 10
+    // marginBottom: 10
   }
 };
 
@@ -67,6 +67,9 @@ class NavBar extends React.Component {
       case '/home':
         this.setState({ isProfile: false })
         break;
+      case '/works':
+        this.setState({ isProfile: false })
+        break;
       default:
         this.setState({ isProfile: true })
     }
@@ -81,7 +84,11 @@ class NavBar extends React.Component {
     return (
       <nav style={styles.nav}>
         <div style={styles.navLogoLinks}>
-          <a href="/home">
+          <a href={
+            this.state.isProfile
+              ? "/profile"
+              : "/home"
+          }>
             <img
               style={styles.logo}
               alt="devconnect logo"

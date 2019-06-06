@@ -6,7 +6,7 @@ const styles = {
         maxWidth: 1200,
         margin: '0 auto',
         padding: '2em',
-        background: '#fff',
+        background: '#fafafaf',
     },
     hiwHeaderH1: {
         textAlign: 'center',
@@ -17,10 +17,11 @@ const styles = {
     hiwUl: {
         listStyleType: 'none',
         marginTop: 25,
+        marginBottom: 0,
         fontFamily: '"Heebo", sans-serif',
-        padding: '1.5em 0',
+        paddingTop: '1.5em',
         borderTop: '1px solid #777',
-        borderBottom: '1px solid #777'
+        // borderBottom: '1px solid #777'
     },
     hiwLi: {
         display: 'flex',
@@ -39,16 +40,16 @@ const styles = {
     },
     headerImage: {
         background: 'url("/images/HowItWorksHeader.jpg") center center no-repeat',
-        backgroundSize: '100% auto',
+        backgroundSize: 'cover',
         width: '100%',
         minHeight: 500
     },
     hiwFooterH1: {
         textAlign: 'center',
         fontWeight: 500,
-        margin: 50,
+        marginBottom: 50,
         fontFamily: '"Heebo", sans-serif',
-        color: '#777'
+        color: '#777',
     },
     bottomBorder: {
         marginTop: '1em',
@@ -66,6 +67,14 @@ const styles = {
         fontFamily: '"Heebo", sans-serif',
         borderRadius: 20,
         marginBottom: 40
+    },
+    bottom: {
+        background: "#fff",
+        padding: "1.5em",
+        border: '1px solid #666',
+        color: "#888"
+
+
     }
 }
 
@@ -95,7 +104,7 @@ const Works = () => {
                         <h3 style={styles.hiwLiH3}>Once the job is completed, review to ensure everyone is happy and mark it as complete.  Compensation is paid out and businesses now have a new product!  Now it's time to start all over again! </h3>
                     </li>
                 </ul>
-                <div>
+                <div style={styles.bottom}>
                     <h1 style={styles.hiwFooterH1}>What are you waiting for?  Sign up now and get started connecting!</h1>
                     <div style={styles.flex}>
                         <Link

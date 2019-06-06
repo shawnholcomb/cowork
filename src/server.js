@@ -26,8 +26,21 @@ app.get('/signin/:email/:password', (req, res) => {
     })
 })
 
-app.get('/createjob/:title/:description/:compensation', (req, res) => {
+app.get('/createjob/:title/:description/:compensation', (req, res) => {    
+    console.log(req.params.title);
     helper.createJob(req.params.title, req.params.description, req.params.compensation, result => {
+        res.send(result);
+    })
+})
+
+app.get('/postmessage/:name/:image/:messageDate/:message', (req, res) => {
+    helper.postMessage(req.params.name, req.params.image, req.params.messageDate, req.params.message, result => {
+        res.send(result);
+    })
+})
+
+app.get('/getmessages', (req, res) => {
+    helper.populateMessages(result => {
         res.send(result);
     })
 })

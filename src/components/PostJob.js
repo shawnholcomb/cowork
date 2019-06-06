@@ -63,7 +63,7 @@ class PostJob extends Component {
     };
   }
 
-  validateForm() {}
+  validateForm() { }
 
   handleChange = event => {
     this.setState({
@@ -77,75 +77,76 @@ class PostJob extends Component {
     axios
       .get(
         `/createjob/${this.state.title}/${this.state.description}/${
-          this.state.compensation
+        this.state.compensation
         }`
       )
       .then(response => {
-        console.log(response);
+        console.log(response)
+        // window.location.href = "/profile";      
       });
 
-    axios.get("/getjobs").then(response => {
-      console.log(response.data);
-    });
-  };
+        // axios.get("/getjobs").then(response => {
+        //   console.log(response.data);
+        // });
+      };
 
-  render() {
-    return (
-      <Modal
-        isopen={
-          this.props.location.state && this.props.location.state.isPostJob
-        }
-      >
-        <h1 style={signInStyle}>Post Job</h1>
-        <form onSubmit={this.handleSubmit} style={formStyle}>
-          <FormGroup controlId="title" bssize="large">
-            <FormControl
-              type="text"
-              value={this.state.title}
-              placeholder="Job Title"
-              onChange={this.handleChange}
-              style={inputStyle}
-            />
-          </FormGroup>
-          <FormGroup controlId="compensation" bssize="large">
-            <FormControl
-              value={
-                this.state.compensation === 0
-                  ? "Compensation"
-                  : this.state.compensation
-              }
-              onChange={this.handleChange}
-              placeholder={
-                this.state.compensation === 0 ? "Compensation" : null
-              }
-              type="number"
-              style={inputStyle}
-            />
-          </FormGroup>
-          <FormGroup controlId="description" bssize="large">
-            <FormControl
-              as="textarea"
-              rows="6"
-              value={this.state.description}
-              onChange={this.handleChange}
-              placeholder="Please enter a description about the job"
-              type="text"
-              style={descriptionStyle}
-            />
-          </FormGroup>
-          <Button
-            block
-            bssize="large"
-            type="Post "
-            style={bttnStyle}
-            className="grow pointer"
-          >
-            Post Job
+    render() {
+      return (
+        <Modal
+          isopen={
+            this.props.location.state && this.props.location.state.isPostJob
+          }
+        >
+          <h1 style={signInStyle}>Post Job</h1>
+          <form onSubmit={this.handleSubmit} style={formStyle}>
+            <FormGroup controlId="title" bssize="large">
+              <FormControl
+                type="text"
+                value={this.state.title}
+                placeholder="Job Title"
+                onChange={this.handleChange}
+                style={inputStyle}
+              />
+            </FormGroup>
+            <FormGroup controlId="compensation" bssize="large">
+              <FormControl
+                value={
+                  this.state.compensation === 0
+                    ? "Compensation"
+                    : this.state.compensation
+                }
+                onChange={this.handleChange}
+                placeholder={
+                  this.state.compensation === 0 ? "Compensation" : null
+                }
+                type="number"
+                style={inputStyle}
+              />
+            </FormGroup>
+            <FormGroup controlId="description" bssize="large">
+              <FormControl
+                as="textarea"
+                rows="6"
+                value={this.state.description}
+                onChange={this.handleChange}
+                placeholder="Please enter a description about the job"
+                type="text"
+                style={descriptionStyle}
+              />
+            </FormGroup>
+            <Button
+              block
+              bssize="large"
+              type="Post "
+              style={bttnStyle}
+              className="grow pointer"
+            >
+              Post Job
           </Button>
-        </form>
-      </Modal>
-    );
+          </form>
+        </Modal>
+      );
+    }
   }
-}
 
-export default withRouter(PostJob);
+  export default withRouter(PostJob);
