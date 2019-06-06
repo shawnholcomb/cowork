@@ -14,7 +14,7 @@ const styles = {
         direction: 'row',
     },
     header: {
-        background: 'url("/images/header-photo.png") right bottom no-repeat',
+        background: 'url("/images/header-photo3.png") right bottom no-repeat',
         backgroundSize: 'cover',
         height: '65vh',
         width: '70%'        
