@@ -6,7 +6,7 @@ const styles = {
         borderRadius: 10,
         width: '100%',
         height: 'auto',
-        marginBottom: 5
+        marginBottom: 8
     },
     inputDiv: {
         display: 'flex',

@@ -72,7 +72,7 @@ class Dropdown extends React.Component {
                     <ul style={styles.ul}>
                         <li className="underline-hover" style={styles.li}><Link to="/profile" style={styles.a}>Edit Profile</Link></li>
                         <li className="underline-hover" style={styles.li}>
-                            <a href="https://devconnecttx.herokuapp.com/home" style={styles.a}>Sign Out</a></li>
+                            <Link to="/return" style={styles.a}>Sign Out</Link></li>
                     </ul>
                 ) :
                     (

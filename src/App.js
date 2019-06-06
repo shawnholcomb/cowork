@@ -70,6 +70,10 @@ class App extends React.Component {
             <Route exact path='/profile/dev4' component={Dev4} />
             <Route exact path='/profile/dev5' component={Dev5} />
             <Route exact path='/joblink' component={Job1} />
+            <Route path='/return' component={() => {
+              window.location.href = 'https://devconnecttx.herokuapp.com/home';
+              return null;
+            }} />
           </Switch>
           <AuthModal />
           <PostJob />
