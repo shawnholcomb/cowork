@@ -1,5 +1,8 @@
 ![DevConnect logo](http://i63.tinypic.com/v3oz8o.png)
 
+Click below for video walkthrough of this application.<br />
+[![DevConnect Demp Video](http://img.youtube.com/vi/9KC8lBXgfY8/0.jpg)](https://www.youtube.com/watch?v=9KC8lBXgfY8&feature=youtu.be "DevConnect Demo Video")<br />
+
 Shawn Holcomb, Josh Beverly, Colin Westmoreland, Kellan Benn
 
 ## Description
